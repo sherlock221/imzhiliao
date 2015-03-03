@@ -1,0 +1,271 @@
+/**
+ * @description 公共部分的CSS
+ * @author   sherlock
+ * @time     1：20
+ */
+
+html, body {
+    width: 100%;
+
+    /** 设置最小宽度 **/
+    min-width: 1003px;
+    overflow: hidden;
+
+    /** 字体类型 **/
+    font-family: "microsoft yahei", "宋体", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    /** 字体大小 **/
+    font-size: 100%;
+    /** 字体颜色 **/
+    color: #333;
+}
+
+ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    /** 字体颜色 **/
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+
+
+/* 默认色 */
+header.xy-header{
+
+    /** 固定头部 **/
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index : 10001;
+    transition: background 1.5s ease;
+    height: 60px;
+
+
+}
+
+/** 反色 **/
+header.xy-header.inverse{
+    background: #0b6bd5;
+    color: #ffffff;
+}
+
+
+/**
+ * 导航
+ */
+nav.xy-nav {
+   height: inherit;
+    margin: 0 auto;
+}
+
+
+/* logo图片 */
+.xy-nav .logo-base {
+    display: block;
+    position: relative;
+    top: 14px;
+    cursor: pointer;
+}
+
+
+/* 导航内容 */
+.xy-nav .xy-nav-main{
+    overflow: hidden;
+    line-height: 22px;
+}
+
+.xy-nav .xy-nav-main > li{
+    float: left;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+.xy-nav .xy-nav-main  >li >a{
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+.xy-nav .xy-nav-main  li>a:hover{
+    color: #b5d5f8;
+}
+.xy-nav .xy-nav-main  li.active > a{
+    color: #75b0f1;
+}
+
+
+
+/**
+ * 常用工具类
+ */
+
+.text-center{
+    text-align: center;
+}
+.ib {
+    /** ie8+ **/
+    display: inline-block;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+.w1000{
+    width: 1003px;
+}
+
+
+
+/** 按钮大小 **/
+.btn{
+    line-height: 1.628;
+    text-align: center;
+    border-radius: 5px;
+
+    outline: none;
+    border: 0 none;
+}
+
+.btn-lg{
+    padding: 11px 0;
+    width: 462px;
+    font-size: 21px;
+
+}
+
+.btn-default{
+    background: #ffffff;
+    color: #2185f3;
+}
+.btn-contact{
+    height: 60px;
+    line-height: 59px;
+    padding: 0;
+    font-size: 18px;
+}
+
+.air-plan{
+
+}
+
+/** 文本框大小 **/
+.input{
+    line-height: 1.428;
+    text-align: left;
+
+}
+
+.input-lg{
+    padding: 11px 0 ;
+    width: 430px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+
+}
+
+.input-default{
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.input-default::-webkit-input-placeholder {
+    color:    white;
+}
+.input-default:-moz-placeholder {
+    color:    white;
+}
+
+
+/** footer **/
+footer{
+    background: #2185f3;
+
+}
+footer h1{
+    font-size: 26px;
+    color: white;
+    font-weight: normal;
+    /*margin-bottom: 65px;*/
+}
+
+.footer-icon{
+    background-image: url("../../images/footer-icon-.png");
+    width: 32px;
+    height: 32px;
+}
+
+.air-plan{
+    background-position:  0 0;
+    position: relative;
+    top: 8px;
+    margin-left: 13px;
+}
+
+.share{
+    background-position: -32px 0;
+}
+
+.txweibo{
+    background-position: -64px 0;
+}
+
+.renren{
+    background-position: -96px 0;
+}
+
+.weibo{
+    background-position: 0 -32px;
+}
+
+.footer-bottom{
+
+
+    border-top: 1px solid white;
+    margin-top: 80px;
+    padding-top: 15px;
+
+    position: absolute;
+
+    bottom: 0px;
+
+    left: 20px;
+    right: 20px;
+
+    opacity: 0;
+    /*height: 90px;*/
+    padding-bottom: 33px;
+}
+
+
+
+.footer-bottom span{
+    color: white;
+    margin-right: 15px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+
