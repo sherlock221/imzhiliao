@@ -1,55 +1,82 @@
-@charset "UTF-8";
 /**
  * @description 公共部分的CSS
  * @author   sherlock
  * @time     1：20
  */
+
 html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  //字体类型
   font-family: "Microsoft YaHei","微软雅黑","Helvetica Neue","Hiragino Sans GB", Tahoma, Verdana, Arial, Helvetica, sans-serif;
-  /** 字体颜色 **/
-  color: #333; }
 
-ul li {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-a {
   /** 字体颜色 **/
   color: #333;
-  text-decoration: none; }
+}
 
-a:hover {
-  text-decoration: none; }
+ul li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  /** 字体颜色 **/
+  color: #333;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
 
 /**
  * 常用工具类
  */
-.text-center {
-  text-align: center; }
 
+.text-center{
+  text-align: center;
+}
 .ib {
   /** ie8+ **/
-  display: inline-block; }
+  display: inline-block;
+}
 
 .pull-right {
-  float: right; }
+  float: right;
+}
 
 .pull-left {
-  float: left; }
+  float: left;
+}
 
 .clearfix {
-  clear: both; }
+  clear: both;
+}
 
-.container {
-  width: 10002px; }
 
-header {
-  background: #ffffff;
-  height: 60px;
-  width: 100%; }
 
-/*# sourceMappingURL=template.css.map */
+//容器大小
+.container{
+  width: 10002px;
+}
+
+
+
+//header
+header{
+    background: #ffffff;
+    height: 60px;
+    width: 100%;
+}
+
+
+//footer
+footer{
+
+}
+
+
+
