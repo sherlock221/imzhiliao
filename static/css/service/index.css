@@ -76,10 +76,11 @@ header .logo {
 nav.nav {
   font-size: 18px;
   color: #3d3d3d;
-  height: 60px; }
+  height: 60px;
+  text-align: right; }
   nav.nav ul {
     clear: both;
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle; }
     nav.nav ul li {
       float: left;
@@ -109,7 +110,7 @@ nav.nav {
 
 .start-zhiliao {
   position: absolute;
-  bottom: 20px;
+  bottom: 80px;
   display: inline-block;
   left: 50%;
   margin-left: -54px; }

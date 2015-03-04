@@ -26,15 +26,12 @@ nav.nav{
   color: $color-gray;
   height: $nav-height;
 
-
-
-
+  text-align: right;
   ul{
 
     clear: both;
-    display:table-cell;
+    display: inline-block;
     vertical-align: middle;
-
 
     li{
         float: left;
@@ -83,7 +80,8 @@ nav.nav{
 
 .start-zhiliao{
   position: absolute;
-  bottom: 20px;
+//  bottom: 20px;
+  bottom: 80px;
   display: inline-block;
   left: 50%;
   margin-left: -54px;
