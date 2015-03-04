@@ -1,0 +1,225 @@
+@import "img";
+
+
+
+$color-gray : #3d3d3d;
+$color-blue : #1190e0;
+$nav-height : 60px;
+
+
+
+#zhiliaoPage > .section{
+  overflow: hidden;
+}
+
+header{
+  .logo{
+    display:table-cell;
+    vertical-align: middle;
+  }
+}
+
+//导航
+nav.nav{
+
+  font-size: 18px;
+  color: $color-gray;
+  height: $nav-height;
+
+
+
+
+  ul{
+
+    clear: both;
+    display:table-cell;
+    vertical-align: middle;
+
+
+    li{
+        float: left;
+        margin-right: 55px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &.last-nav{
+          margin-right: 0;
+        }
+
+      a{
+        color: $color-gray;
+        display: block;
+        padding: 10px 12px;
+      }
+
+      &.active a{
+        color: $color-blue;
+      }
+    }
+  }
+
+}
+
+
+//font
+//文字
+.zhiliao-font-desc{
+  font-size: 44px;
+  margin-top: 22px;
+  margin-bottom: 173px;
+}
+
+.title-font{
+  color: #3c3c3c;
+  font-size: 28.5px;
+
+  .active{
+    color: #f3985b;
+    font-size: 41px;
+  }
+}
+
+.start-zhiliao{
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0px;
+
+  p{
+    font-size: 18px;
+  }
+
+}
+
+.iphone-right{
+  position: absolute;
+  bottom: -256px;
+  right: 0px;
+}
+
+.iphone-left{
+
+}
+
+.fun{
+  margin-top: 88px;
+  span{
+    margin-right: 56px;
+  }
+}
+
+
+.chat-info{
+   & > .ib{
+     vertical-align: top;
+   }
+
+
+
+
+  .chat-hd{
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+
+
+   .user-name{
+     color: #626262;
+     font-size: 16px;
+     margin-left: 11px;
+   }
+
+
+    p{
+      color: #000;
+      font-size: 24px;
+      margin-top: 9px;
+    }
+
+  .white-chat{
+    span{
+      margin-left: 39px;
+      margin-right: 31px;
+      margin-top: 13px;
+    }
+  }
+
+  .blue-chat{
+    span{
+      margin: 17px;
+      margin-left: 30px;
+      color: #ffffff;
+    }
+  }
+
+
+  &.blue{
+    .user-name{
+      left: -17px;
+      position: relative;
+    }
+
+    .chat-hd{
+      margin-left: 15px;
+      margin-right: 0;
+    }
+  }
+
+}
+
+.chat-list-head{
+    margin-top: 67px;
+    & >span{
+      margin-right: 25px;
+
+      &.last{
+        margin-right: 62px;
+      }
+    }
+}
+
+
+
+//last
+.last-page-title{
+  color: #3c3c3c;
+  margin-bottom: 68px;
+}
+
+.last-nav{
+
+    li{
+
+      display: inline-block;
+
+      a{
+        width: 234px;
+        height: 211px;
+        display: block;
+        background: #ffffff;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 211px;
+      }
+    }
+}
+
+//dowload
+.dowload-btn{
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  width: 240px;
+  height: 63px;
+  background: #fcb167;
+  text-align: center;
+  line-height: 63px;
+
+  color: #ffffff;
+  font-size: 24px;
+  border-radius: 40px;
+}

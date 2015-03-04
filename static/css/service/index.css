@@ -1,37 +1,191 @@
-/*
-Error: Invalid CSS after ".": expected "{", was ""
-        on line 1 of index.scss
+.ui-img {
+  background-image: url("../../imgs/ui.png");
+  background-size: 1000px 2000px; }
 
-1: .
+.logo {
+  background-position: 0 0;
+  width: 110px;
+  height: 40px; }
 
-Backtrace:
-index.scss:1
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:641:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:635:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:650:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:350:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:50:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/bin/scss:13:in `<top (required)>'
-/usr/bin/scss:23:in `load'
-/usr/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \".\": expected \"{\", was \"\"\A         on line 1 of index.scss\A \A 1: ."; }
+.arrow-down {
+  background-position: 0 -40px;
+  width: 45px;
+  height: 45px; }
+
+.point-circle {
+  background-position: 0 -96px;
+  width: 12px;
+  height: 12px; }
+  .point-circle.active {
+    background-position: 0 -85px; }
+
+.android-icon {
+  width: 45px;
+  height: 56px;
+  background-position: 0 -108px; }
+
+.ios-icon {
+  width: 45px;
+  height: 56px;
+  background-position: 0 -164px; }
+
+.microphone {
+  width: 41px;
+  height: 56px;
+  background-position: -45px -108px; }
+
+.camera {
+  width: 51px;
+  height: 56px;
+  background-position: -85px -108px; }
+
+.timer {
+  width: 49px;
+  height: 56px;
+  background-position: -136px -108px; }
+
+.zhiliao-font {
+  background-position: 0 -361px;
+  width: 136px;
+  height: 61px; }
+
+.timer-slice {
+  width: 571px;
+  height: 88px;
+  background-position: 0 -422px;
+  margin-top: 115px;
+  margin-left: -76px; }
+
+.white-chat {
+  width: 333px;
+  height: 98px;
+  background-position: 0 -662px; }
+
+.blue-chat {
+  width: 333px;
+  height: 66px;
+  background-position: 0 -596px; }
+
+#zhiliaoPage > .section {
+  overflow: hidden; }
+
+header .logo {
+  display: table-cell;
+  vertical-align: middle; }
+
+nav.nav {
+  font-size: 18px;
+  color: #3d3d3d;
+  height: 60px; }
+  nav.nav ul {
+    clear: both;
+    display: table-cell;
+    vertical-align: middle; }
+    nav.nav ul li {
+      float: left;
+      margin-right: 55px; }
+      nav.nav ul li:last-child {
+        margin-right: 0; }
+      nav.nav ul li.last-nav {
+        margin-right: 0; }
+      nav.nav ul li a {
+        color: #3d3d3d;
+        display: block;
+        padding: 10px 12px; }
+      nav.nav ul li.active a {
+        color: #1190e0; }
+
+.zhiliao-font-desc {
+  font-size: 44px;
+  margin-top: 22px;
+  margin-bottom: 173px; }
+
+.title-font {
+  color: #3c3c3c;
+  font-size: 28.5px; }
+  .title-font .active {
+    color: #f3985b;
+    font-size: 41px; }
+
+.start-zhiliao {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0px; }
+  .start-zhiliao p {
+    font-size: 18px; }
+
+.iphone-right {
+  position: absolute;
+  bottom: -256px;
+  right: 0px; }
+
+.fun {
+  margin-top: 88px; }
+  .fun span {
+    margin-right: 56px; }
+
+.chat-info > .ib {
+  vertical-align: top; }
+.chat-info .chat-hd {
+  margin-right: 15px;
+  margin-left: 0; }
+.chat-info .user-name {
+  color: #626262;
+  font-size: 16px;
+  margin-left: 11px; }
+.chat-info p {
+  color: #000;
+  font-size: 24px;
+  margin-top: 9px; }
+.chat-info .white-chat span {
+  margin-left: 39px;
+  margin-right: 31px;
+  margin-top: 13px; }
+.chat-info .blue-chat span {
+  margin: 17px;
+  margin-left: 30px;
+  color: #ffffff; }
+.chat-info.blue .user-name {
+  left: -17px;
+  position: relative; }
+.chat-info.blue .chat-hd {
+  margin-left: 15px;
+  margin-right: 0; }
+
+.chat-list-head {
+  margin-top: 67px; }
+  .chat-list-head > span {
+    margin-right: 25px; }
+    .chat-list-head > span.last {
+      margin-right: 62px; }
+
+.last-page-title {
+  color: #3c3c3c;
+  margin-bottom: 68px; }
+
+.last-nav li {
+  display: inline-block; }
+  .last-nav li a {
+    width: 234px;
+    height: 211px;
+    display: block;
+    background: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 211px; }
+
+.dowload-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 240px;
+  height: 63px;
+  background: #fcb167;
+  text-align: center;
+  line-height: 63px;
+  color: #ffffff;
+  font-size: 24px;
+  border-radius: 40px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,104 @@
+//图片的引用
+.ui-img{
+  background-image: url("../../imgs/ui.png");
+  background-size: 1000px 2000px;
+}
+
+
+
+//logo
+.logo{
+  background-position:  0 0;
+  width: 110px;
+  height: 40px;
+}
+
+//向下箭头
+.arrow-down{
+  background-position: 0 -40px;
+  width: 45px;
+  height: 45px;
+}
+
+//point点
+.point-circle{
+
+  background-position: 0 -96px;
+  width: 12px;
+  height: 12px;
+
+  &.active{
+    background-position: 0 -85px;
+  }
+}
+
+//android
+.android-icon{
+   width: 45px;
+   height: 56px;
+
+  background-position: 0 -108px;
+}
+
+//ios
+.ios-icon{
+  width: 45px;
+  height: 56px;
+  background-position: 0 -164px;
+}
+
+
+//麦克风
+.microphone{
+  width: 41px;
+  height: 56px;
+  background-position: -45px -108px;
+}
+
+//照相机
+.camera{
+  width: 51px;
+  height: 56px;
+  background-position: -85px -108px;
+}
+
+//时间
+.timer{
+  width: 49px;
+  height: 56px;
+  background-position: -136px -108px;
+}
+
+
+//zhiliao
+.zhiliao-font{
+  background-position: 0 -361px;
+  width: 136px;
+  height: 61px;
+}
+
+
+.timer-slice{
+  width: 571px;
+  height: 88px;
+  background-position: 0 -422px;
+
+  margin-top: 115px;
+  margin-left: -76px;
+}
+
+
+
+//white
+.white-chat{
+  width: 333px;
+  height: 98px;
+  background-position: 0 -662px;
+}
+
+
+.blue-chat{
+  width: 333px;
+  height: 66px;
+  background-position: 0 -596px;
+}

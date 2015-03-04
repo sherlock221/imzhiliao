@@ -13,10 +13,10 @@ html, body {
   font-family: "Microsoft YaHei","微软雅黑","Helvetica Neue","Hiragino Sans GB", Tahoma, Verdana, Arial, Helvetica, sans-serif;
 
   /** 字体颜色 **/
-  color: #333;
+  color: #ffffff;
 }
 
-ul li{
+ul,li{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -39,6 +39,14 @@ a:hover{
 .text-center{
   text-align: center;
 }
+
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+
 .ib {
   /** ie8+ **/
   display: inline-block;
@@ -56,12 +64,52 @@ a:hover{
   clear: both;
 }
 
+.hidden-val {
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px
+}
+.ovh{
+  overflow: hidden;
+}
 
+
+.res-img{
+  width: 100%;
+  height: auto;
+}
+
+//table布局
+.db{
+  display: table;
+  height: inherit;
+
+  width: 100%;
+}
+
+.db-cell-middle{
+  display:table-cell;
+  vertical-align: middle;
+}
+
+
+
+.height-ih{
+  height: inherit;
+}
 
 //容器大小
 .container{
-  width: 10002px;
+  width: 1002px;
+  margin:  0 auto;
+  height: 100%;
+  position: relative;
+  border:1px solid #dddddd;
+
 }
+
 
 
 
@@ -79,4 +127,42 @@ footer{
 }
 
 
+h1,h2,h3,h4,h5{
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+
+
+//背景图片
+.bg{
+    background-size: cover;
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    background-position: center center;
+
+  &.bg-01{
+    background-image: url("../../imgs/bg-01.jpg");
+  }
+
+  &.bg-02{
+    background-image: url("../../imgs/bg-02.jpg");
+  }
+
+  &.bg-03{
+    background-image: url("../../imgs/bg-03.jpg");
+  }
+  &.bg-04{
+    background-image: url("../../imgs/bg-04.jpg");
+  }
+  &.bg-05{
+    background-image: url("../../imgs/bg-05.jpg");
+  }
+  &.bg-06{
+    background: #fafafa;
+  }
+}
 

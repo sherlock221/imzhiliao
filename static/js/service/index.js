@@ -21,8 +21,11 @@ define(function (require, exports, module) {
             //初始化全屏
             UI.$zhiliaoPage.fullpage({
 
+                navigation : true,
+                navigationPosition: 'right',
+
                 onLeave : function(){
-                    console.log("leave...");
+                    //console.log("leave...");
                 }
 
             });
