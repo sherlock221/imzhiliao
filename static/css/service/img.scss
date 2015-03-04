@@ -1,3 +1,4 @@
+@charset "utf-8";
 //图片的引用
 .ui-img{
   background-image: url("../../imgs/ui.png");
@@ -16,8 +17,8 @@
 //向下箭头
 .arrow-down{
   background-position: 0 -40px;
-  width: 45px;
-  height: 45px;
+  width: 44px;
+  height: 44px;
 }
 
 //point点
@@ -36,7 +37,6 @@
 .android-icon{
    width: 45px;
    height: 56px;
-
   background-position: 0 -108px;
 }
 

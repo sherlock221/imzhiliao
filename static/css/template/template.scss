@@ -1,8 +1,11 @@
+@charset "utf-8";
 /**
  * @description 公共部分的CSS
  * @author   sherlock
  * @time     1：20
  */
+
+@import "fun";
 
 html, body {
   width: 100%;
@@ -89,6 +92,9 @@ a:hover{
   width: 100%;
 }
 
+.db-row{
+  display: table-row;
+}
 .db-cell-middle{
   display:table-cell;
   vertical-align: middle;
@@ -106,7 +112,7 @@ a:hover{
   margin:  0 auto;
   height: 100%;
   position: relative;
-  border:1px solid #dddddd;
+//  border:1px solid #dddddd;
 
 }
 
@@ -124,6 +130,44 @@ header{
 //footer
 footer{
 
+
+  .company{
+    clear: both;
+    overflow: hidden;
+    margin-left: 32px;
+
+    li{
+      float: left;
+      a{
+        display: block;
+        color: #343434;
+
+        &:after{
+          content: "|";
+          display: inline-block;
+          color: #dadada;
+          margin-left: 16px;
+
+        }
+
+        margin-right: 16px;
+
+        &.last:after{
+          content: "";
+        }
+
+      }
+    }
+  }
+
+  .copyright{
+    color: #343434;
+  }
+
+  .attention{
+    color: #343434;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -162,7 +206,8 @@ h1,h2,h3,h4,h5{
     background-image: url("../../imgs/bg-05.jpg");
   }
   &.bg-06{
-    background: #fafafa;
+    background: #f4f4f4;
   }
+
 }
 

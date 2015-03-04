@@ -69,6 +69,9 @@ a:hover {
   height: inherit;
   width: 100%; }
 
+.db-row {
+  display: table-row; }
+
 .db-cell-middle {
   display: table-cell;
   vertical-align: middle; }
@@ -80,13 +83,35 @@ a:hover {
   width: 1002px;
   margin: 0 auto;
   height: 100%;
-  position: relative;
-  border: 1px solid #dddddd; }
+  position: relative; }
 
 header {
   background: #ffffff;
   height: 60px;
   width: 100%; }
+
+footer .company {
+  clear: both;
+  overflow: hidden;
+  margin-left: 32px; }
+  footer .company li {
+    float: left; }
+    footer .company li a {
+      display: block;
+      color: #343434;
+      margin-right: 16px; }
+      footer .company li a:after {
+        content: "|";
+        display: inline-block;
+        color: #dadada;
+        margin-left: 16px; }
+      footer .company li a.last:after {
+        content: ""; }
+footer .copyright {
+  color: #343434; }
+footer .attention {
+  color: #343434;
+  margin-bottom: 0; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -109,6 +134,6 @@ h1, h2, h3, h4, h5 {
   .bg.bg-05 {
     background-image: url("../../imgs/bg-05.jpg"); }
   .bg.bg-06 {
-    background: #fafafa; }
+    background: #f4f4f4; }
 
 /*# sourceMappingURL=template.css.map */

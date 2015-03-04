@@ -9,8 +9,8 @@
 
 .arrow-down {
   background-position: 0 -40px;
-  width: 45px;
-  height: 45px; }
+  width: 44px;
+  height: 44px; }
 
 .point-circle {
   background-position: 0 -96px;
@@ -109,9 +109,10 @@ nav.nav {
 
 .start-zhiliao {
   position: absolute;
-  width: 100%;
   bottom: 20px;
-  left: 0px; }
+  display: inline-block;
+  left: 50%;
+  margin-left: -54px; }
   .start-zhiliao p {
     font-size: 18px; }
 
@@ -160,20 +161,45 @@ nav.nav {
     .chat-list-head > span.last {
       margin-right: 62px; }
 
+.bg-fa {
+  background: #fafafa; }
+
 .last-page-title {
   color: #3c3c3c;
-  margin-bottom: 68px; }
+  margin-bottom: 80px; }
 
 .last-nav li {
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 14px; }
   .last-nav li a {
     width: 234px;
     height: 211px;
-    display: block;
     background: #ffffff;
     text-align: center;
+    line-height: 211px;
+    position: relative;
+    display: block;
     vertical-align: middle;
-    line-height: 211px; }
+    border: 1px solid #e9e9e9;
+    -webkit-transition: all 1.3s ease;
+    transition: all 1.3s ease;
+    -moz-transition: all 1.3s ease;
+    -ms-transition: all 1.3s ease; }
+    .last-nav li a.android {
+      background: #1190df; }
+    .last-nav li a:hover {
+      background: #f0f1f1; }
+    .last-nav li a.android:hover {
+      background: #30aefd; }
+    .last-nav li a .text {
+      position: absolute;
+      bottom: -28px;
+      left: 90px;
+      z-index: 99; }
+    .last-nav li a.android .text {
+      color: #ffffff; }
+    .last-nav li a .code {
+      vertical-align: middle; }
 
 .dowload-btn {
   margin: 0;
@@ -186,6 +212,28 @@ nav.nav {
   line-height: 63px;
   color: #ffffff;
   font-size: 24px;
-  border-radius: 40px; }
+  border-radius: 40px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease; }
+  .dowload-btn:hover {
+    background: #f38d28; }
+
+.arrow-down {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg); }
+  .arrow-down:hover {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg); }
 
 /*# sourceMappingURL=index.css.map */
