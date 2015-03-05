@@ -61,6 +61,33 @@
   width: 136px;
   height: 61px; }
 
+.big-circle {
+  background-position: 0 -760px;
+  width: 268px;
+  height: 268px;
+  position: relative;
+  z-index: 4; }
+
+.middle-circle {
+  width: 205px;
+  height: 206px;
+  background-position: 0 -1028px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -104.5px;
+  margin-top: -103px;
+  text-align: center;
+  z-index: 5; }
+
+.safe {
+  width: 143px;
+  height: 142px;
+  background-position: 0 -220px;
+  position: absolute;
+  top: 64px;
+  left: 61px; }
+
 .timer-slice {
   width: 571px;
   height: 88px;
@@ -121,6 +148,12 @@ nav.nav {
   .title-font .active {
     color: #f3985b;
     font-size: 41px; }
+
+.title-font-heart {
+  color: #3c3c3c;
+  font-size: 28.5px;
+  width: 350px;
+  margin: 22px 0; }
 
 .start-zhiliao {
   position: absolute;
@@ -242,7 +275,7 @@ nav.nav {
   width: 335px;
   height: 700px;
   background-image: url("../../imgs/iphone_700.png");
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -260,9 +293,55 @@ nav.nav {
   width: 340px;
   height: 68px;
   position: relative;
-  background-image: url("../../imgs/02/2x/bar.jpg");
+  background-image: url("../../imgs/02/bar.png");
   background-size: 340px 68px; }
 
+.send-bg-main {
+  background-image: url("../../imgs/03/publish.png");
+  width: 301px;
+  height: 534.275px;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 83px;
+  left: 16px;
+  overflow: hidden; }
+
+.send-timer {
+  background-image: url("../../imgs/03/select.png");
+  width: 301px;
+  height: 193.76875px;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px; }
+
+.send-voice {
+  background-image: url("../../imgs/03/voice.png");
+  width: 301px;
+  height: 194.68132px;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%); }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .iphone-bar {
+    background-image: url("../../imgs/02/2x/bar.jpg");
+    background-size: 340px 68px; }
+
+  .send-timer {
+    background-image: url("../../imgs/03/2x/select.png"); }
+
+  .send-voice {
+    background-image: url("../../imgs/03/2x/voice.png"); }
+
+  .send-bg-main {
+    background-image: url("../../imgs/03/2x/publish.png"); } }
 .iphone-wrap {
   width: 602px;
   position: relative;
@@ -289,33 +368,22 @@ nav.nav {
   position: relative;
   top: 57px; }
 
-.send-bg-main {
-  background-image: url("../../imgs/03/2x/publish.png");
-  width: 301px;
-  height: 534.275px;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 82px;
-  left: 17px; }
+.microphone-blue {
+  overflow: hidden; }
 
-.send-timer {
-  background-image: url("../../imgs/03/2x/select.png");
-  width: 301px;
-  height: 193.76875px;
-  background-size: 100% 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px; }
+.microphone-wave-wrap {
+  position: relative;
+  width: 17px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 30px; }
 
-.send-voice {
-  background-image: url("../../imgs/03/2x/voice.png");
-  width: 301px;
-  height: 194.68132px;
-  background-size: 100% 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  text-align: center; }
+.microphone-wave {
+  background: #627aaf;
+  position: relative;
+  bottom: -33px;
+  width: 100%;
+  height: 100%; }
 
 .pointer {
   width: 50px;
@@ -328,6 +396,70 @@ nav.nav {
   z-index: 99;
   left: 149px;
   top: 98px;
+  opacity: 0; }
+
+.pointer02 {
+  position: absolute;
+  z-index: 99;
+  left: 205px;
+  top: 142px;
+  opacity: 0; }
+
+.class-reject {
+  margin-right: 113px;
+  margin-bottom: 30px; }
+
+.phone-ve {
+  font-size: 22px;
+  text-align: center;
+  color: #3d6a98;
+  width: 155px;
+  margin-right: 23px;
+  height: 40px;
+  margin-top: 88px;
+  line-height: 40px;
+  background: #d5e4ea;
+  border-radius: 4px; }
+
+.circle-base {
+  position: relative;
+  width: 268px;
+  height: 268px; }
+
+.safe-head-01 {
+  position: absolute;
+  top: -35px;
+  left: 94px;
+  z-index: 10; }
+
+.safe-head-02 {
+  position: absolute;
+  bottom: -18px;
+  left: -13px;
+  z-index: 10; }
+
+.safe-head-03 {
+  position: absolute;
+  bottom: 25px;
+  right: -39px;
+  z-index: 10; }
+
+.typing {
+  margin-top: 113px;
+  color: #3d3d3d;
+  margin-left: 12px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0; }
+
+.typing-2 {
+  color: #3d3d3d;
+  margin-left: 12px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 10px;
   opacity: 0; }
 
 /** 保持结束帧 **/
@@ -366,6 +498,81 @@ nav.nav {
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg); }
 
+@-webkit-keyframes microphone-wave {
+  0% {
+    bottom: -33px; }
+  20% {
+    bottom: -23px; }
+  30% {
+    bottom: -33px; }
+  40% {
+    bottom: -23px; }
+  60% {
+    bottom: -33px; }
+  80% {
+    bottom: -18px; }
+  100% {
+    bottom: -33px; } }
+@-moz-keyframes microphone-wave {
+  0% {
+    bottom: -33px; }
+  20% {
+    bottom: -23px; }
+  30% {
+    bottom: -33px; }
+  40% {
+    bottom: -23px; }
+  60% {
+    bottom: -33px; }
+  80% {
+    bottom: -18px; }
+  100% {
+    bottom: -33px; } }
+@-o-keyframes microphone-wave {
+  0% {
+    bottom: -33px; }
+  20% {
+    bottom: -23px; }
+  30% {
+    bottom: -33px; }
+  40% {
+    bottom: -23px; }
+  60% {
+    bottom: -33px; }
+  80% {
+    bottom: -18px; }
+  100% {
+    bottom: -33px; } }
+@-ms-keyframes microphone-wave {
+  0% {
+    bottom: -33px; }
+  20% {
+    bottom: -23px; }
+  30% {
+    bottom: -33px; }
+  40% {
+    bottom: -23px; }
+  60% {
+    bottom: -33px; }
+  80% {
+    bottom: -18px; }
+  100% {
+    bottom: -33px; } }
+@keyframes microphone-wave {
+  0% {
+    bottom: -33px; }
+  20% {
+    bottom: -23px; }
+  30% {
+    bottom: -33px; }
+  40% {
+    bottom: -23px; }
+  60% {
+    bottom: -33px; }
+  80% {
+    bottom: -18px; }
+  100% {
+    bottom: -33px; } }
 @-webkit-keyframes pointer-animate {
   0% {
     -webkit-transform: scale(0.2);
@@ -416,6 +623,27 @@ nav.nav {
   100% {
     -webkit-transform: scale(2);
     opacity: 0; } }
+.chat-hd-01, .chat-hd-02 {
+  opacity: 0; }
+
+.chat-message-02, .chat-message-01 {
+  opacity: 0; }
+
+.chat-list-head span {
+  opacity: 0; }
+
+.big-circle {
+  opacity: 0; }
+
+.middle-circle {
+  opacity: 0; }
+
+.safe {
+  opacity: 0; }
+
+.safe-head-01, .safe-head-02, .safe-head-03 {
+  opacity: 0; }
+
 .section.animated .bg-02 .pointer01 {
   -webkit-animation: pointer-animate 0.4s ease-in 0.6s both;
   -ms-animation: pointer-animate 0.4s ease-in 0.6s both;
@@ -428,6 +656,122 @@ nav.nav {
   -moz-animation: bg-02-slide 0.6s ease 1.4s 1 both;
   -o-animation: bg-02-slide 0.6s ease 1.4s 1 both;
   animation: bg-02-slide 0.6s ease 1.4s 1 both; }
+.section.animated .bg-03 .send-voice {
+  -webkit-animation: slideInUp 0.6s ease 0.2s 1 both;
+  -ms-animation: slideInUp 0.6s ease 0.2s 1 both;
+  -moz-animation: slideInUp 0.6s ease 0.2s 1 both;
+  -o-animation: slideInUp 0.6s ease 0.2s 1 both;
+  animation: slideInUp 0.6s ease 0.2s 1 both; }
+.section.animated .bg-03 .microphone-wave {
+  -webkit-animation: microphone-wave 2s ease 1s 1 both;
+  -ms-animation: microphone-wave 2s ease 1s 1 both;
+  -moz-animation: microphone-wave 2s ease 1s 1 both;
+  -o-animation: microphone-wave 2s ease 1s 1 both;
+  animation: microphone-wave 2s ease 1s 1 both; }
+.section.animated .bg-03 .pointer02 {
+  -webkit-animation: pointer-animate 0.4s ease-in 3.2s both;
+  -ms-animation: pointer-animate 0.4s ease-in 3.2s both;
+  -moz-animation: pointer-animate 0.4s ease-in 3.2s both;
+  -o-animation: pointer-animate 0.4s ease-in 3.2s both;
+  animation: pointer-animate 0.4s ease-in 3.2s both; }
+.section.animated .bg-03 .typing {
+  opacity: 1;
+  -webkit-animation: type 2s steps(50, end) 3.6s 1 both;
+  -ms-animation: type 2s steps(50, end) 3.6s 1 both;
+  -moz-animation: type 2s steps(50, end) 3.6s 1 both;
+  -o-animation: type 2s steps(50, end) 3.6s 1 both;
+  animation: type 2s steps(50, end) 3.6s 1 both; }
+.section.animated .bg-03 .typing-2 {
+  opacity: 1;
+  -webkit-animation: type 2s steps(50, end) 5.6s 1 both;
+  -ms-animation: type 2s steps(50, end) 5.6s 1 both;
+  -moz-animation: type 2s steps(50, end) 5.6s 1 both;
+  -o-animation: type 2s steps(50, end) 5.6s 1 both;
+  animation: type 2s steps(50, end) 5.6s 1 both; }
+.section.animated .bg-04 .chat-hd-01 {
+  -webkit-animation: bounceIn 0.6s ease 0s both;
+  -ms-animation: bounceIn 0.6s ease 0s both;
+  -moz-animation: bounceIn 0.6s ease 0s both;
+  -o-animation: bounceIn 0.6s ease 0s both;
+  animation: bounceIn 0.6s ease 0s both; }
+.section.animated .bg-04 .chat-message-01 {
+  -webkit-animation: fadeIn 0.4s ease 0.5s both;
+  -ms-animation: fadeIn 0.4s ease 0.5s both;
+  -moz-animation: fadeIn 0.4s ease 0.5s both;
+  -o-animation: fadeIn 0.4s ease 0.5s both;
+  animation: fadeIn 0.4s ease 0.5s both; }
+.section.animated .bg-04 .chat-hd-02 {
+  -webkit-animation: bounceIn 0.6s ease 1.2s both;
+  -ms-animation: bounceIn 0.6s ease 1.2s both;
+  -moz-animation: bounceIn 0.6s ease 1.2s both;
+  -o-animation: bounceIn 0.6s ease 1.2s both;
+  animation: bounceIn 0.6s ease 1.2s both; }
+.section.animated .bg-04 .chat-message-02 {
+  -webkit-animation: fadeIn 0.4s ease 1.7s both;
+  -ms-animation: fadeIn 0.4s ease 1.7s both;
+  -moz-animation: fadeIn 0.4s ease 1.7s both;
+  -o-animation: fadeIn 0.4s ease 1.7s both;
+  animation: fadeIn 0.4s ease 1.7s both; }
+.section.animated .bg-04 .chat-list-head span:nth-child(1) {
+  -webkit-animation: bounceIn 0.6s 2.1s both;
+  -ms-animation: bounceIn 0.6s 2.1s both;
+  -moz-animation: bounceIn 0.6s 2.1s both;
+  -o-animation: bounceIn 0.6s 2.1s both;
+  animation: bounceIn 0.6s 2.1s both; }
+.section.animated .bg-04 .chat-list-head span:nth-child(2) {
+  -webkit-animation: bounceIn 0.6s 2.3s both;
+  -ms-animation: bounceIn 0.6s 2.3s both;
+  -moz-animation: bounceIn 0.6s 2.3s both;
+  -o-animation: bounceIn 0.6s 2.3s both;
+  animation: bounceIn 0.6s 2.3s both; }
+.section.animated .bg-04 .chat-list-head span:nth-child(3) {
+  -webkit-animation: bounceIn 0.6s 2.5s both;
+  -ms-animation: bounceIn 0.6s 2.5s both;
+  -moz-animation: bounceIn 0.6s 2.5s both;
+  -o-animation: bounceIn 0.6s 2.5s both;
+  animation: bounceIn 0.6s 2.5s both; }
+.section.animated .bg-04 .chat-list-head span:nth-child(4) {
+  -webkit-animation: bounceIn 0.6s 2.7s both;
+  -ms-animation: bounceIn 0.6s 2.7s both;
+  -moz-animation: bounceIn 0.6s 2.7s both;
+  -o-animation: bounceIn 0.6s 2.7s both;
+  animation: bounceIn 0.6s 2.7s both; }
+.section.animated .bg-05 .big-circle {
+  -webkit-animation: zoomIn 1s ease 0s both;
+  -ms-animation: zoomIn 1s ease 0s both;
+  -moz-animation: zoomIn 1s ease 0s both;
+  -o-animation: zoomIn 1s ease 0s both;
+  animation: zoomIn 1s ease 0s both; }
+.section.animated .bg-05 .middle-circle {
+  -webkit-animation: zoomIn 1s ease 0.4s both;
+  -ms-animation: zoomIn 1s ease 0.4s both;
+  -moz-animation: zoomIn 1s ease 0.4s both;
+  -o-animation: zoomIn 1s ease 0.4s both;
+  animation: zoomIn 1s ease 0.4s both; }
+.section.animated .bg-05 .safe {
+  -webkit-animation: zoomIn 0.6s ease 0.8s both;
+  -ms-animation: zoomIn 0.6s ease 0.8s both;
+  -moz-animation: zoomIn 0.6s ease 0.8s both;
+  -o-animation: zoomIn 0.6s ease 0.8s both;
+  animation: zoomIn 0.6s ease 0.8s both; }
+.section.animated .bg-05 .safe-head-01 {
+  -webkit-animation: bounceIn 0.6s 1.4s both;
+  -ms-animation: bounceIn 0.6s 1.4s both;
+  -moz-animation: bounceIn 0.6s 1.4s both;
+  -o-animation: bounceIn 0.6s 1.4s both;
+  animation: bounceIn 0.6s 1.4s both; }
+.section.animated .bg-05 .safe-head-03 {
+  -webkit-animation: bounceIn 0.6s 1.6s both;
+  -ms-animation: bounceIn 0.6s 1.6s both;
+  -moz-animation: bounceIn 0.6s 1.6s both;
+  -o-animation: bounceIn 0.6s 1.6s both;
+  animation: bounceIn 0.6s 1.6s both; }
+.section.animated .bg-05 .safe-head-02 {
+  -webkit-animation: bounceIn 0.6s 1.8s both;
+  -ms-animation: bounceIn 0.6s 1.8s both;
+  -moz-animation: bounceIn 0.6s 1.8s both;
+  -o-animation: bounceIn 0.6s 1.8s both;
+  animation: bounceIn 0.6s 1.8s both; }
 
 @-webkit-keyframes bg-02-slide {
   0% {
@@ -484,5 +828,20 @@ nav.nav {
     transform: translate3d(-301px, 0px, 0px);
     -moz-transform: translate3d(-301px, 0px, 0px);
     -ms-transform: translate3d(-301px, 0px, 0px); } }
+@-webkit-keyframes type {
+  from {
+    width: 0; } }
+@-moz-keyframes type {
+  from {
+    width: 0; } }
+@-o-keyframes type {
+  from {
+    width: 0; } }
+@-ms-keyframes type {
+  from {
+    width: 0; } }
+@keyframes type {
+  from {
+    width: 0; } }
 
 /*# sourceMappingURL=index.css.map */

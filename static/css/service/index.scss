@@ -81,6 +81,13 @@ nav.nav{
   }
 }
 
+.title-font-heart{
+  color: #3c3c3c;
+  font-size: 28.5px;
+  width: 350px;
+  margin: 22px 0;
+}
+
 .start-zhiliao{
   position: absolute;
 //  bottom: 20px;
@@ -277,7 +284,7 @@ nav.nav{
   width: 335px;
   height: 700px;
   background-image: url("../../imgs/iphone_700.png");
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -296,16 +303,76 @@ nav.nav{
 
 }
 
+
+
 .iphone-bar{
   width: 340px;
   height: 68px;
   position: relative;
-
-
-  background-image: url("../../imgs/02/2x/bar.jpg");
+  background-image: url("../../imgs/02/bar.png");
   background-size: 340px 68px;
 }
 
+.send-bg-main{
+  background-image: url("../../imgs/03/publish.png");
+  width: 301px;
+  height:  (301 / (640 / 1136)  ) * 1px;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 83px;
+  left: 16px;
+  overflow: hidden;
+
+
+
+}
+
+//弹出选择时间
+.send-timer{
+  background-image: url("../../imgs/03/select.png");
+  width: 301px;
+  height:  (301 / (640 / 412)  ) * 1px;
+  background-size: 100% 100%;
+
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+//弹出语音
+.send-voice{
+  background-image: url("../../imgs/03/voice.png");
+  width: 301px;
+  height: 194.68132px;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  @include px-transform(translateY(100%));
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .iphone-bar{
+    background-image: url("../../imgs/02/2x/bar.jpg");
+    background-size: 340px 68px;
+  }
+  //弹出选择时间
+  .send-timer{
+    background-image: url("../../imgs/03/2x/select.png");
+  }
+  //弹出语音
+  .send-voice{
+    background-image: url("../../imgs/03/2x/voice.png");
+  }
+  .send-bg-main{
+    background-image: url("../../imgs/03/2x/publish.png");
+  }
+}
 
 
 .iphone-wrap{
@@ -340,41 +407,27 @@ nav.nav{
 
   position: relative;
   top: 57px;
-}
-
-.send-bg-main{
-  background-image: url("../../imgs/03/2x/publish.png");
-  width: 301px;
-  height:  (301 / (640 / 1136)  ) * 1px;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 82px;
-  left: 17px;
 
 }
-
-//弹出选择时间
-.send-timer{
-  background-image: url("../../imgs/03/2x/select.png");
-  width: 301px;
-  height:  (301 / (640 / 412)  ) * 1px;
-  background-size: 100% 100%;
-
-
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+.microphone-blue{
+  overflow: hidden;
 }
-//弹出语音
-.send-voice{
-  background-image: url("../../imgs/03/2x/voice.png");
-  width: 301px;
-  height: 194.68132px;
-  background-size: 100% 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  text-align: center;
+
+//麦克风水波
+.microphone-wave-wrap{
+  position: relative;
+  width: 17px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.microphone-wave{
+  background: #627aaf;
+  position: relative;
+  bottom: -33px;
+
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -393,6 +446,84 @@ nav.nav{
   z-index: 99;
   left: 149px;
   top: 98px;
+  opacity: 0;
+}
+
+.pointer02{
+  position: absolute;
+  z-index: 99;
+  left: 205px;
+  top: 142px;
+  opacity: 0;
+}
+
+.pointer03{
+
+}
+
+.class-reject{
+  margin-right: 113px;
+  margin-bottom: 30px;
+}
+
+.phone-ve{
+  font-size: 22px;
+  text-align: center;
+  color: #3d6a98;
+  width: 155px;
+  margin-right: 23px;
+  height: 40px;
+  margin-top: 88px;
+  line-height: 40px;
+//  background: rgba(193, 212, 227, 0.5);
+  background: #d5e4ea;
+  border-radius: 4px;
+}
+.circle-base{
+  position: relative;
+  width: 268px;
+  height: 268px;
+}
+
+.safe-head-01{
+  position: absolute;
+  top: -35px;
+  left: 94px;
+  z-index: 10;
+}
+.safe-head-02{
+  position: absolute;
+  bottom: -18px;
+  left: -13px;
+  z-index: 10;
+}
+.safe-head-03{
+  position: absolute;
+  bottom: 25px;
+  right: -39px;
+  z-index: 10;
+}
+
+
+.typing{
+  margin-top: 113px;
+  color: #3d3d3d;
+  margin-left: 12px;
+
+  width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+
+  opacity: 0;
+}
+.typing-2{
+  color: #3d3d3d;
+  margin-left: 12px;
+  width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+
+  margin-top : 10px;
   opacity: 0;
 }
 
