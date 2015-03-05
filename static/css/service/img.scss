@@ -1,9 +1,26 @@
 @charset "utf-8";
 //图片的引用
+
 .ui-img{
   background-image: url("../../imgs/ui.png");
   background-size: 1000px 2000px;
 }
+
+
+//2x屏幕
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .ui-img{
+    background-image: url("../../imgs/ui@2x.png");
+    background-size: 1000px 2000px;
+  }
+}
+
+
+
+
 
 
 
@@ -69,6 +86,16 @@
   background-position: -136px -108px;
 }
 
+//麦克风蓝色
+.microphone-blue{
+  width: 33px;
+  height: 47px;
+  background-position: -184px -108px;
+
+  position: relative;
+  top: 16px
+}
+
 
 //zhiliao
 .zhiliao-font{
@@ -86,6 +113,7 @@
   margin-top: 115px;
   margin-left: -76px;
 }
+
 
 
 

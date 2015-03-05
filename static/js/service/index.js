@@ -1,5 +1,6 @@
 /**
  * 首页js
+ * @autor sherlock221b
  */
 
 
@@ -15,6 +16,25 @@ define(function (require, exports, module) {
         $zhiliaoPage :  $("#zhiliaoPage")
     };
 
+    var pages = UI.$zhiliaoPage.children(".section")
+
+    //动画切换的算法
+    var getPage = function(index){
+        var temp;
+
+        for(var i=0; i<pages.length;i++){
+            var p =  pages[i];
+            if(p.id == "page0"+index){
+                temp = $(p);
+                temp.addClass("animated");
+            }
+            else{
+                $(p).removeClass("animated");
+            }
+        }
+    }
+
+
     var Event = {
         init : function(){
 
@@ -25,9 +45,11 @@ define(function (require, exports, module) {
                 navigationPosition: 'right',
 
                 onLeave : function(){
-                    //console.log("leave...");
+//                    console.log("leave...");
+                },
+                afterLoad : function(anchorLink,index){
+                     getPage(index);
                 }
-
             });
 
         }

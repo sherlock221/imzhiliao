@@ -1,7 +1,12 @@
+@charset "UTF-8";
 .ui-img {
   background-image: url("../../imgs/ui.png");
   background-size: 1000px 2000px; }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .ui-img {
+    background-image: url("../../imgs/ui@2x.png");
+    background-size: 1000px 2000px; } }
 .logo {
   background-position: 0 0;
   width: 110px;
@@ -43,6 +48,13 @@
   width: 49px;
   height: 56px;
   background-position: -136px -108px; }
+
+.microphone-blue {
+  width: 33px;
+  height: 47px;
+  background-position: -184px -108px;
+  position: relative;
+  top: 16px; }
 
 .zhiliao-font {
   background-position: 0 -361px;
@@ -97,9 +109,11 @@ nav.nav {
         color: #1190e0; }
 
 .zhiliao-font-desc {
-  font-size: 44px;
   margin-top: 22px;
-  margin-bottom: 173px; }
+  margin-bottom: 173px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6); }
 
 .title-font {
   color: #3c3c3c;
@@ -116,11 +130,6 @@ nav.nav {
   margin-left: -54px; }
   .start-zhiliao p {
     font-size: 18px; }
-
-.iphone-right {
-  position: absolute;
-  bottom: -256px;
-  right: 0px; }
 
 .fun {
   margin-top: 88px; }
@@ -221,6 +230,126 @@ nav.nav {
   .dowload-btn:hover {
     background: #f38d28; }
 
+.iphone-bg {
+  position: absolute;
+  bottom: -135px;
+  right: 0px;
+  width: 335px;
+  height: 700px;
+  overflow: hidden; }
+
+.iphone-bg-main {
+  width: 335px;
+  height: 700px;
+  background-image: url("../../imgs/iphone_700.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.iphone-wrap-main {
+  width: 315px;
+  position: absolute;
+  top: 82px;
+  left: 16px;
+  overflow: hidden; }
+
+.iphone-bar {
+  width: 340px;
+  height: 68px;
+  position: relative;
+  background-image: url("../../imgs/02/2x/bar.jpg");
+  background-size: 340px 68px; }
+
+.iphone-wrap {
+  width: 602px;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px); }
+  .iphone-wrap .screen {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 301px;
+    overflow: hidden; }
+    .iphone-wrap .screen img {
+      width: 100%;
+      height: auto; }
+
+.microphone-blue-main {
+  border: 1px solid #d7dbdf;
+  border-radius: 10px;
+  padding: 35px;
+  background: #ffffff;
+  vertical-align: middle;
+  position: relative;
+  top: 57px; }
+
+.send-bg-main {
+  background-image: url("../../imgs/03/2x/publish.png");
+  width: 301px;
+  height: 534.275px;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 82px;
+  left: 17px; }
+
+.send-timer {
+  background-image: url("../../imgs/03/2x/select.png");
+  width: 301px;
+  height: 193.76875px;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px; }
+
+.send-voice {
+  background-image: url("../../imgs/03/2x/voice.png");
+  width: 301px;
+  height: 194.68132px;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center; }
+
+.pointer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f59955; }
+
+.pointer01 {
+  position: absolute;
+  z-index: 99;
+  left: 149px;
+  top: 98px;
+  opacity: 0; }
+
+/** 保持结束帧 **/
+.an-util-forwards {
+  -webkit-animation-fill-mode: forwards !important;
+  -moz-animation-fill-mode: forwards !important;
+  -ms-animation-fill-mode: forwards !important;
+  animation-fill-mode: forwards !important; }
+
+.an-util-both {
+  -webkit-animation-fill-mode: both !important;
+  -moz-animation-fill-mode: both !important;
+  -ms-animation-fill-mode: both !important;
+  animation-fill-mode: both !important; }
+
+/** 保持开始帧 **/
+.an-util-backwards {
+  -webkit-animation-fill-mode: backwards !important;
+  -moz-animation-fill-mode: backwards !important;
+  -ms-animation-fill-mode: backwards !important;
+  animation-fill-mode: backwards !important; }
+
 .arrow-down {
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -236,5 +365,124 @@ nav.nav {
     transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg); }
+
+@-webkit-keyframes pointer-animate {
+  0% {
+    -webkit-transform: scale(0.2);
+    opacity: 0; }
+  10% {
+    -webkit-transform: scale(0.2);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0; } }
+@-moz-keyframes pointer-animate {
+  0% {
+    -webkit-transform: scale(0.2);
+    opacity: 0; }
+  10% {
+    -webkit-transform: scale(0.2);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0; } }
+@-o-keyframes pointer-animate {
+  0% {
+    -webkit-transform: scale(0.2);
+    opacity: 0; }
+  10% {
+    -webkit-transform: scale(0.2);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0; } }
+@-ms-keyframes pointer-animate {
+  0% {
+    -webkit-transform: scale(0.2);
+    opacity: 0; }
+  10% {
+    -webkit-transform: scale(0.2);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0; } }
+@keyframes pointer-animate {
+  0% {
+    -webkit-transform: scale(0.2);
+    opacity: 0; }
+  10% {
+    -webkit-transform: scale(0.2);
+    opacity: 0.2; }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0; } }
+.section.animated .bg-02 .pointer01 {
+  -webkit-animation: pointer-animate 0.4s ease-in 0.6s both;
+  -ms-animation: pointer-animate 0.4s ease-in 0.6s both;
+  -moz-animation: pointer-animate 0.4s ease-in 0.6s both;
+  -o-animation: pointer-animate 0.4s ease-in 0.6s both;
+  animation: pointer-animate 0.4s ease-in 0.6s both; }
+.section.animated .bg-02 .iphone-wrap {
+  -webkit-animation: bg-02-slide 0.6s ease 1.4s 1 both;
+  -ms-animation: bg-02-slide 0.6s ease 1.4s 1 both;
+  -moz-animation: bg-02-slide 0.6s ease 1.4s 1 both;
+  -o-animation: bg-02-slide 0.6s ease 1.4s 1 both;
+  animation: bg-02-slide 0.6s ease 1.4s 1 both; }
+
+@-webkit-keyframes bg-02-slide {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px); }
+  100% {
+    -webkit-transform: translate3d(-301px, 0px, 0px);
+    transform: translate3d(-301px, 0px, 0px);
+    -moz-transform: translate3d(-301px, 0px, 0px);
+    -ms-transform: translate3d(-301px, 0px, 0px); } }
+@-moz-keyframes bg-02-slide {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px); }
+  100% {
+    -webkit-transform: translate3d(-301px, 0px, 0px);
+    transform: translate3d(-301px, 0px, 0px);
+    -moz-transform: translate3d(-301px, 0px, 0px);
+    -ms-transform: translate3d(-301px, 0px, 0px); } }
+@-o-keyframes bg-02-slide {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px); }
+  100% {
+    -webkit-transform: translate3d(-301px, 0px, 0px);
+    transform: translate3d(-301px, 0px, 0px);
+    -moz-transform: translate3d(-301px, 0px, 0px);
+    -ms-transform: translate3d(-301px, 0px, 0px); } }
+@-ms-keyframes bg-02-slide {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px); }
+  100% {
+    -webkit-transform: translate3d(-301px, 0px, 0px);
+    transform: translate3d(-301px, 0px, 0px);
+    -moz-transform: translate3d(-301px, 0px, 0px);
+    -ms-transform: translate3d(-301px, 0px, 0px); } }
+@keyframes bg-02-slide {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px); }
+  100% {
+    -webkit-transform: translate3d(-301px, 0px, 0px);
+    transform: translate3d(-301px, 0px, 0px);
+    -moz-transform: translate3d(-301px, 0px, 0px);
+    -ms-transform: translate3d(-301px, 0px, 0px); } }
 
 /*# sourceMappingURL=index.css.map */

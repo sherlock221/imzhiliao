@@ -2,36 +2,76 @@
 
 //常用功能函数
 
-
 //px
-@function rem($px){
+@function rem($px) {
   //  @return  $px / $scale * 1px ;
-  @return  $px;
+  @return $px;
 }
 
 //transform 全适配
-@mixin px-transform ($value){
-  -webkit-transform : $value;
-  transform  : $value;
-  -moz-transform : $value;
-  -ms-transform : $value;
+@mixin px-transform($value) {
+  -webkit-transform: $value;
+  transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
 }
 
 //transition 全适配
-@mixin px-transition ($value){
-  -webkit-transition : $value;
-  transition  : $value;
-  -moz-transition : $value;
-  -ms-transition : $value;
+@mixin px-transition($value) {
+  -webkit-transition: $value;
+  transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
 }
 
 //css3 水平垂直居中
-@mixin  transCenter(){
+@mixin transCenter() {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform : translate(-50%,-50%);
-  transform  : translate(-50%,-50%);
-  -moz-transform : translate(-50%,-50%);
-  -ms-transform :translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+//animation
+@mixin animation($animationName) {
+  -webkit-animation: $animationName;
+  -ms-animation: $animationName;
+  -moz-animation: $animationName;
+  -o-animation: $animationName;
+  animation: $animationName;
+}
+
+
+//key frames
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+//高清屏幕
+
+
+
+@mixin  animation-mode($mode){
+  -webkit-animation-fill-mode: $mode !important;
+  -moz-animation-fill-mode: $mode !important;
+  -ms-animation-fill-mode: $mode !important;
+  animation-fill-mode: $mode !important;
 }

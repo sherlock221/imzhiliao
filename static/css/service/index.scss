@@ -63,9 +63,12 @@ nav.nav{
 //font
 //文字
 .zhiliao-font-desc{
-  font-size: 44px;
+//  font-size: 44px;
   margin-top: 22px;
   margin-bottom: 173px;
+  font-size: 50px;
+  color: rgb( 255, 255, 255 );
+  text-shadow: 1px 2px 2px rgba( 0, 0, 0 , 0.6 );
 }
 
 .title-font{
@@ -92,11 +95,7 @@ nav.nav{
 
 }
 
-.iphone-right{
-  position: absolute;
-  bottom: -256px;
-  right: 0px;
-}
+
 
 .iphone-left{
 
@@ -263,5 +262,142 @@ nav.nav{
 }
 
 
+//iphone背景图
+.iphone-bg{
+  position: absolute;
+  bottom: -135px;
+  right: 0px;
+  width: 335px;
+  height: 700px;
+  overflow: hidden;
+
+}
+
+.iphone-bg-main{
+  width: 335px;
+  height: 700px;
+  background-image: url("../../imgs/iphone_700.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+
+.iphone-wrap-main{
+    width: 315px;
+  position: absolute;
+  top: 82px;
+  left: 16px;
+  overflow: hidden;
+
+
+}
+
+.iphone-bar{
+  width: 340px;
+  height: 68px;
+  position: relative;
+
+
+  background-image: url("../../imgs/02/2x/bar.jpg");
+  background-size: 340px 68px;
+}
+
+
+
+.iphone-wrap{
+  width:  301 * 2px;
+  position: relative;
+
+  //默认开启3d加速
+  @include px-transform(translate3d(0px, 0px, 0px));
+
+  .screen{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width:  301px;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}
+
+
+.microphone-blue-main{
+  border: 1px solid #d7dbdf;
+  border-radius: 10px;
+  padding: 35px;
+  background: #ffffff;
+  vertical-align: middle;
+
+  position: relative;
+  top: 57px;
+}
+
+.send-bg-main{
+  background-image: url("../../imgs/03/2x/publish.png");
+  width: 301px;
+  height:  (301 / (640 / 1136)  ) * 1px;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 82px;
+  left: 17px;
+
+}
+
+//弹出选择时间
+.send-timer{
+  background-image: url("../../imgs/03/2x/select.png");
+  width: 301px;
+  height:  (301 / (640 / 412)  ) * 1px;
+  background-size: 100% 100%;
+
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+//弹出语音
+.send-voice{
+  background-image: url("../../imgs/03/2x/voice.png");
+  width: 301px;
+  height: 194.68132px;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+}
+
+
+
+//点击
+.pointer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+//  background: rgba(0,0,0,1);
+  background: #f59955;
+}
+
+.pointer01{
+  position: absolute;
+  z-index: 99;
+  left: 149px;
+  top: 98px;
+  opacity: 0;
+}
+
+
 @import "ani";
+
+
 
