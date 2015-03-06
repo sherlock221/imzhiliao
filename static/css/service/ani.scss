@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 
+
 /** 保持结束帧 **/
 .an-util-forwards {
   @include animation-mode(forwards);
@@ -59,47 +60,52 @@
 
 @include keyframes(pointer-animate){
   0% {
-    -webkit-transform: scale(0.2);
+    @include px-transform(scale(0.2));
     opacity: 0
   }
   10%{
-    -webkit-transform: scale(0.2);
+    @include px-transform(scale(0.2));
     opacity: .5
   }
-
   100% {
-    -webkit-transform: scale(2);
+    @include px-transform(scale(2));
     opacity: 0
   }
 }
-
 
 
 //动画前处理
 .chat-hd-01,.chat-hd-02{
   opacity: 0;
+  opacity : 1\9\0;
 }
 .chat-message-02, .chat-message-01{
   opacity: 0;
+  opacity : 1\9\0;
 }
 .chat-list-head span{
   opacity: 0;
+  opacity : 1\9\0;
 }
 
 
 
 .big-circle{
   opacity: 0;
+  opacity : 1\9\0;
 }
 .middle-circle{
   opacity: 0;
+  opacity : 1\9\0;
 }
 .safe{
   opacity: 0;
+  opacity : 1\9\0;
 }
 
 .safe-head-01,.safe-head-02,.safe-head-03{
   opacity: 0;
+  opacity : 1\9\0;
 }
 
 
@@ -168,8 +174,6 @@
    .select-timer{
      @include animation( fadeIn 0.8s ease 7.8s  1 both );
    }
-
-
 
 
    //选择时间

@@ -467,7 +467,8 @@ nav.nav {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #f59955; }
+  background: #f59955;
+  display: none\0; }
 
 .pointer01 {
   position: absolute;
@@ -655,73 +656,125 @@ nav.nav {
 @-webkit-keyframes pointer-animate {
   0% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0; }
   10% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0.5; }
   100% {
     -webkit-transform: scale(2);
+    transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
     opacity: 0; } }
 @-moz-keyframes pointer-animate {
   0% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0; }
   10% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0.5; }
   100% {
     -webkit-transform: scale(2);
+    transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
     opacity: 0; } }
 @-o-keyframes pointer-animate {
   0% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0; }
   10% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0.5; }
   100% {
     -webkit-transform: scale(2);
+    transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
     opacity: 0; } }
 @-ms-keyframes pointer-animate {
   0% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0; }
   10% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0.5; }
   100% {
     -webkit-transform: scale(2);
+    transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
     opacity: 0; } }
 @keyframes pointer-animate {
   0% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0; }
   10% {
     -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
     opacity: 0.5; }
   100% {
     -webkit-transform: scale(2);
+    transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
     opacity: 0; } }
 .chat-hd-01, .chat-hd-02 {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .chat-message-02, .chat-message-01 {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .chat-list-head span {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .big-circle {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .middle-circle {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .safe {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .safe-head-01, .safe-head-02, .safe-head-03 {
-  opacity: 0; }
+  opacity: 0;
+  opacity: 1\9\0; }
 
 .section.animated .bg-02 .pointer01 {
   -webkit-animation: pointer-animate 0.4s ease-in 0.2s both;

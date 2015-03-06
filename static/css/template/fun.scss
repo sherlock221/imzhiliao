@@ -8,6 +8,12 @@
   @return $px;
 }
 
+//hack ie9
+@mixin ie9($value){
+  opacity : $value+ "\9\0";
+}
+
+
 //transform 全适配
 @mixin px-transform($value) {
   -webkit-transform: $value;

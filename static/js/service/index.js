@@ -8,9 +8,26 @@ define(function (require, exports, module) {
 
     //暴露全局
     window.$  = require("$");
-
     //引入翻页
     require("full-page")($);
+
+
+    //检测手机类型
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i) ? true : false;
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+        }
+    };
+
+
+    //全局配置
+    var  androidUrl  ="http://imzhiliao.com/zhiliao.apk";
+    var iosUrl = "https://itunes.apple.com/cn/app/id948591472?mt=8";
+
+
 
     var UI = {
         $zhiliaoPage :  $("#zhiliaoPage"),
@@ -21,8 +38,11 @@ define(function (require, exports, module) {
         $pointer01  : $("#pointer01"),
         $pointer0102 : $("#pointer01-02"),
         $pointer02   : $("#pointer02"),
-        $type02 : $("#typing-2")
+        $type02 : $("#typing-2"),
+        downHref  : $("#downHref")
     };
+
+
 
     var pages = UI.$zhiliaoPage.children(".section")
 
@@ -41,7 +61,6 @@ define(function (require, exports, module) {
             }
         }
 
-
     }
 
     var toggleSlide = function(num){
@@ -49,6 +68,18 @@ define(function (require, exports, module) {
         lis.removeClass("active");
         lis.eq(num).addClass("active");
     }
+
+    window.downFn = function(type){
+        if(type =="ios"){
+            window.location.href = iosUrl;
+        }
+        else{
+            window.location.href = androidUrl;
+        }
+
+
+    }
+
 
 
     var Event = {
@@ -81,7 +112,9 @@ define(function (require, exports, module) {
                     console.log("render...");
                 }
             });
-
+            UI.downHref.click(function(){
+                $.fn.fullpage.moveTo(6);
+            });
         }
     }
 
