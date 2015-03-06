@@ -54,15 +54,20 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .android-icon{
    width: 45px;
    height: 56px;
-  background-position: 0 -108px;
+
+  background-position: -89px -164px;
 }
 
 //ios
 .ios-icon{
   width: 45px;
   height: 56px;
-  background-position: 0 -164px;
+  background-position: 2px -164px;
+
 }
+
+
+
 
 
 //麦克风
@@ -129,6 +134,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
   z-index: 5;
 }
 
+//版本
+.version{
+   width: 70px;
+  height: 30px;
+  background-position: -143px -164px;
+}
 //安全
 .safe{
   width: 143px;
@@ -146,7 +157,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
   margin-top: 115px;
   margin-left: -76px;
 }
-
 
 
 

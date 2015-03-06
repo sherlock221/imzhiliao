@@ -107,7 +107,13 @@
         <div class="container">
             <div class="db">
                 <div class="db-cell-middle">
-                    <h1 class="hidden-val zhiliao-font ui-img">知了</h1>
+                    <h1 class="hidden-val zhiliao-font ui-img ib">
+                        知了
+                    </h1>
+                    <span class="ib version version-pos ui-img">
+                        v1.4
+                    </span>
+
 
                     <h1 class="zhiliao-font-desc">最懂你的教育社交产品</h1>
 
@@ -149,24 +155,52 @@
 
                 <!-- 第二屏iphone -->
                 <div class="db-cell-middle">
-                    <div class="iphone-bg">
+                    <div class="iphone-bg ">
 
-                        <i class="ib pointer pointer01"></i>
-                       <section class="iphone-wrap-main ">
-                           <div class="iphone-bar">
-                           </div>
+                        <i class="ib pointer pointer01" id="pointer01"></i>
+                        <i class="ib pointer pointer01-02" id="pointer01-02"></i>
 
-                            <div class="iphone-wrap an-util-both">
-                                   <div class="screen">
-                                       <img src="../static/imgs/02/2x/all.jpg"  class="img-02-01" />
-                                   </div><div class="screen">
-                                       <img src="../static/imgs/02/2x/teacher.jpg"  class="img-02-02" />
-                                   </div>
-                             </div>
-                       </section>
                         <div class="iphone-bg-main">
 
+                            <section class="iphone-wrap-main ">
+                                <div class="iphone-bar">
+
+                                    <ul class="ib zhiliao-nav" id="zhiliao-nav">
+
+                                        <li class="active">
+                                            <a href="javascript:void(0)" >
+                                                全部
+                                                <span class="ib zhiliao-nav-circle ui-img point-circle active"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0)">老师
+                                                <span class="ib zhiliao-nav-circle ui-img point-circle active"></span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0)">家长
+                                                <span class="ib zhiliao-nav-circle ui-img point-circle active"></span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="iphone-wrap an-util-both" id="iphone-wrap">
+                                    <div class="screen">
+                                        <img src="../static/imgs/02/2x/all.jpg"  class="img-02-01" />
+                                    </div><div class="screen">
+                                    <img src="../static/imgs/02/2x/teacher.jpg"  class="img-02-02" />
+                                </div>
+                                </div>
+                            </section>
+
+
                         </div>
+
 
                     </div>
                 </div>
@@ -193,14 +227,18 @@
                                    今天的语文作业是朗诵P16全文，
                                </p>
 
-                               <p class="typing-2">
+                               <p class="typing-2" id="typing-2">
                                    并完成第三题
+                               </p>
+
+                               <p class="select-timer">
+                                   03-05 10：00
                                </p>
 
 
                                <!-- 发音 -->
-                               <div class="send-voice send-voice-02">
-                                   <i class="ib pointer pointer02"></i>
+                               <div class="send-voice send-voice-02 send-voice-ani-01">
+                                   <i class="ib pointer pointer02" id="pointer02"></i>
                                    <span class="microphone-blue-main">
 
                                        <i class="ib ui-img microphone-blue">
@@ -212,6 +250,14 @@
                                    </span>
 
                                </div>
+
+                               <!-- 选择时间 -->
+                               <div class="send-time send-time-ani-01">
+
+                                   <i class="ib pointer pointer03" id="pointer03"></i>
+
+                               </div>
+
                            </div>
                     </div>
 
@@ -374,14 +420,14 @@
 
                         <ul class="last-nav">
                             <li>
-                                <a href="javascript:void(0)">
+                                <a class="ani" href="javascript:void(0)">
                                     <span class="ib ui-img ios-icon"></span>
 
                                     <div class="text">iPhone</div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" class="android">
+                                <a class="ani" href="javascript:void(0)" class="android">
                                     <span class="ib ui-img android-icon"></span>
 
                                     <div class="text">Android</div>
@@ -421,7 +467,7 @@
                             </div>
                             <div class="text-center">
                                 <p class="copyright">
-                                    Copyright© imzhiliao.com. All rights reserved
+                                    Copyright © imzhiliao.com. All rights reserved
                                 </p>
                                 <p class="attention">
                                     关注我们

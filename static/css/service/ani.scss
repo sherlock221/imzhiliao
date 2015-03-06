@@ -20,12 +20,12 @@
 
 .arrow-down{
   cursor: pointer;
-  @include px-transition(all 0.5s ease);
-
-  @include px-transform(rotate(180deg));
+//  @include px-transition(all 0.5s ease);
+//
+//  @include px-transform(rotate(180deg));
 
   &:hover{
-    @include px-transform(rotate(0deg));
+//    @include px-transform(rotate(0deg));
   }
 }
 
@@ -57,7 +57,6 @@
 }
 
 
-
 @include keyframes(pointer-animate){
   0% {
     -webkit-transform: scale(0.2);
@@ -65,7 +64,7 @@
   }
   10%{
     -webkit-transform: scale(0.2);
-    opacity: .2
+    opacity: .5
   }
 
   100% {
@@ -112,39 +111,66 @@
   .bg-02{
       //第一个点击
       .pointer01{
-        @include animation(pointer-animate 0.4s ease-in 0.6s both );
+        @include animation(pointer-animate 0.4s ease-in 0.2s both );
       }
-
-      //接下来滑动
-      .iphone-wrap{
-        @include animation(bg-02-slide 0.6s ease 1.4s  1 both );
+//      //接下来滑动
+//      .iphone-wrap{
+//        @include animation(bg-02-slide 0.6s ease 1s  1 both );
+//      }
+      //接下来再次点击
+      .pointer01-02{
+        @include animation(pointer-animate 0.4s ease-in 1.6s both );
       }
   }
 
   //03
  .bg-03{
 
-    .send-voice{
-      @include animation( slideInUp 0.6s ease 0.2s  1 both );
-    }
-
-   .microphone-wave{
-     @include animation( microphone-wave 2s ease 1s  1 both );
+   .send-voice-ani-01{
+     @include animation( slideInUp 0.6s ease 0.2s  1 both );
    }
 
-   .pointer02{
-     @include animation(pointer-animate 0.4s ease-in  3.2s both );
+
+   .microphone-wave{
+     @include animation( microphone-wave 1.7s ease 1s  2 both );
    }
 
    //打字机
   .typing{
     opacity: 1;
-    @include animation( type 2s steps(50, end)   3.6s 1 both);
+    @include animation( type 2s steps(50, end)   1.5s 1 both);
   }
    .typing-2{
      opacity: 1;
-     @include animation( type 2s steps(50, end)   5.6s 1 both);
+     @include animation( type 2s steps(50, end)   3.5s 1 both);
    }
+
+
+   .pointer02{
+     @include animation(pointer-animate 0.4s ease-in  5s both );
+   }
+
+
+    //选择时间
+    .send-time-ani-01{
+      @include animation( slideInUp 0.6s ease  6s  1 both );
+    }
+
+   .pointer03{
+     @include animation(pointer-animate 0.4s ease-in  6.8s both );
+   }
+
+   .send-time-ani-02{
+     @include animation( slideInDownVoice 0.4s ease 0.8s  1 both );
+   }
+
+   //显示时间
+   .select-timer{
+     @include animation( fadeIn 0.8s ease 7.8s  1 both );
+   }
+
+
+
 
    //选择时间
 //   .send-voice-02{
@@ -159,14 +185,14 @@
       @include animation(bounceIn 0.6s  ease 0s both);
     }
     .chat-message-01{
-      @include animation(fadeIn 0.4s ease  0.5s both);
+      @include animation(fadeIn 0.8s ease  0.5s both);
     }
 
     .chat-hd-02{
       @include animation(bounceIn 0.6s   ease 1.2s both);
     }
     .chat-message-02{
-      @include animation(fadeIn 0.4s ease  1.7s both);
+      @include animation(fadeIn 0.8s ease  1.7s both);
     }
 
     .chat-list-head {
@@ -174,13 +200,13 @@
         @include animation(bounceIn 0.6s  2.1s both);
       }
       span:nth-child(2){
-        @include animation(bounceIn 0.6s  2.3s both);
+        @include animation(bounceIn 0.6s  2.0s both);
       }
       span:nth-child(3){
-        @include animation(bounceIn 0.6s  2.5s both);
+        @include animation(bounceIn 0.6s  2.1s both);
       }
       span:nth-child(4){
-        @include animation(bounceIn 0.6s  2.7s both);
+        @include animation(bounceIn 0.6s  2.0s both);
       }
     }
 
@@ -214,7 +240,6 @@
 
 
 
-
 //第二张图滑动动画
 @include keyframes(bg-02-slide){
   0%{
@@ -228,6 +253,50 @@
 }
 
 
+@include keyframes(bg-02-slide-next){
+  0%{
+    @include px-transform(translate3d(-301px, 0px, 0px));
+
+  }
+  100%{
+    @include px-transform(translate3d(0px, 0px, 0px));
+  }
+}
+
+
+
+
+//声音下滑
+
+@include keyframes(slideInDownVoice){
+
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+}
+
 @include keyframes(type){
   from { width: 0;}
+}
+
+
+
+.bg-02-slide-rev{
+  @include px-transform(translate3d(0px, 0px, 0px));
+}
+
+.bg-02-slide{
+  @include px-transform(translate3d(-301px, 0px, 0px));
+}
+
+.send-voice-ani-02{
+  @include animation( slideInDownVoice 0.4s ease 0s  1 both );
 }

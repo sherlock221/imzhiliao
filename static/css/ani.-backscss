@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+
+/** 保持结束帧 **/
+.an-util-forwards {
+  @include animation-mode(forwards);
+}
+
+//全部保持
+.an-util-both {
+  @include animation-mode(both);
+}
+
+/** 保持开始帧 **/
+.an-util-backwards {
+  @include animation-mode(backwards);
+}
+
+
+
+.arrow-down{
+  cursor: pointer;
+//  @include px-transition(all 0.5s ease);
+//
+//  @include px-transform(rotate(180deg));
+
+  &:hover{
+//    @include px-transform(rotate(0deg));
+  }
+}
+
+
+
+@include keyframes(microphone-wave){
+  0% {
+    bottom: -33px;
+  }
+  20%{
+    bottom: -23px;
+  }
+  30%{
+    bottom : -33px;
+  }
+  40%{
+    bottom: -23px;
+  }
+
+  60%{
+    bottom: -33px;
+  }
+  80%{
+    bottom : -18px;
+  }
+  100% {
+    bottom : -33px;
+  }
+}
+
+
+@include keyframes(pointer-animate){
+  0% {
+    -webkit-transform: scale(0.2);
+    opacity: 0
+  }
+  10%{
+    -webkit-transform: scale(0.2);
+    opacity: .5
+  }
+
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0
+  }
+}
+
+
+
+//动画前处理
+.chat-hd-01,.chat-hd-02{
+  opacity: 0;
+}
+.chat-message-02, .chat-message-01{
+  opacity: 0;
+}
+.chat-list-head span{
+  opacity: 0;
+}
+
+
+
+.big-circle{
+  opacity: 0;
+}
+.middle-circle{
+  opacity: 0;
+}
+.safe{
+  opacity: 0;
+}
+
+.safe-head-01,.safe-head-02,.safe-head-03{
+  opacity: 0;
+}
+
+
+
+//触发动画
+.section.animated{
+
+  //02
+  .bg-02{
+      //第一个点击
+      .pointer01{
+        @include animation(pointer-animate 0.4s ease-in 0.2s both );
+      }
+//      //接下来滑动
+//      .iphone-wrap{
+//        @include animation(bg-02-slide 0.6s ease 1s  1 both );
+//      }
+      //接下来再次点击
+      .pointer01-02{
+        @include animation(pointer-animate 0.4s ease-in 1.6s both );
+      }
+  }
+
+  //03
+ .bg-03{
+
+    .send-voice-ani-01{
+      @include animation( slideInUp 0.6s ease 0.2s  1 both );
+    }
+
+     .microphone-wave{
+       @include animation( microphone-wave 2s ease 1s  1 both );
+     }
+
+   .pointer02{
+     @include animation(pointer-animate 0.4s ease-in  3.2s both );
+   }
+
+   .send-voice-ani-02{
+     @include animation( slideInDownVoice 0.4s ease 3s  1 both );
+   }
+
+
+
+   //打字机
+  .typing{
+    opacity: 1;
+    @include animation( type 2s steps(50, end)   4s 1 both);
+  }
+   .typing-2{
+     opacity: 1;
+     @include animation( type 2s steps(50, end)   6s 1 both);
+   }
+
+
+    //选择时间
+    .send-time-ani-01{
+      @include animation( slideInUp 0.6s ease  7s  1 both );
+    }
+
+   .pointer03{
+     @include animation(pointer-animate 0.4s ease-in  7.8s both );
+   }
+
+   .send-time-ani-02{
+     @include animation( slideInDownVoice 0.4s ease 0.8s  1 both );
+   }
+
+   //显示时间
+   .select-timer{
+     @include animation( fadeIn 0.8s ease 8.8s  1 both );
+   }
+
+
+
+
+   //选择时间
+//   .send-voice-02{
+//     @include animation( slideInDown 0.6s ease 7.7s  1 both );
+//   }
+ }
+
+  //04
+  .bg-04{
+
+    .chat-hd-01{
+      @include animation(bounceIn 0.6s  ease 0s both);
+    }
+    .chat-message-01{
+      @include animation(fadeIn 0.8s ease  0.5s both);
+    }
+
+    .chat-hd-02{
+      @include animation(bounceIn 0.6s   ease 1.2s both);
+    }
+    .chat-message-02{
+      @include animation(fadeIn 0.8s ease  1.7s both);
+    }
+
+    .chat-list-head {
+      span:nth-child(1){
+        @include animation(bounceIn 0.6s  2.1s both);
+      }
+      span:nth-child(2){
+        @include animation(bounceIn 0.6s  2.0s both);
+      }
+      span:nth-child(3){
+        @include animation(bounceIn 0.6s  2.1s both);
+      }
+      span:nth-child(4){
+        @include animation(bounceIn 0.6s  2.0s both);
+      }
+    }
+
+
+  }
+
+  //bg05
+  .bg-05{
+    .big-circle{
+      @include animation(zoomIn 1s ease 0s both);
+    }
+    .middle-circle{
+      @include animation(zoomIn 1s ease  0.4s both);
+    }
+    .safe{
+      @include animation(zoomIn 0.6s ease 0.8s both);
+    }
+   .safe-head-01{
+     @include animation(bounceIn 0.6s   1.4s both);
+   }
+    .safe-head-03{
+      @include animation(bounceIn 0.6s  1.6s both);
+    }
+    .safe-head-02{
+      @include animation(bounceIn 0.6s  1.8s both);
+    }
+  }
+
+}
+
+
+
+
+//第二张图滑动动画
+@include keyframes(bg-02-slide){
+  0%{
+    @include px-transform(translate3d(0px, 0px, 0px));
+
+  }
+
+  100%{
+    @include px-transform(translate3d(-301px, 0px, 0px));
+  }
+}
+
+
+@include keyframes(bg-02-slide-next){
+  0%{
+    @include px-transform(translate3d(-301px, 0px, 0px));
+
+  }
+  100%{
+    @include px-transform(translate3d(0px, 0px, 0px));
+  }
+}
+
+
+
+
+//声音下滑
+
+@include keyframes(slideInDownVoice){
+
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+}
+
+@include keyframes(type){
+  from { width: 0;}
+}
+
+
+
+.bg-02-slide-rev{
+  @include px-transform(translate3d(0px, 0px, 0px));
+}
+
+.bg-02-slide{
+  @include px-transform(translate3d(-301px, 0px, 0px));
+}

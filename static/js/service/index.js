@@ -13,7 +13,15 @@ define(function (require, exports, module) {
     require("full-page")($);
 
     var UI = {
-        $zhiliaoPage :  $("#zhiliaoPage")
+        $zhiliaoPage :  $("#zhiliaoPage"),
+        $sendVoice   : $(".send-voice"),
+        $sendTime   : $(".send-time"),
+        $zhiliaoNav : $("#zhiliao-nav"),
+        $inputWrap : $("#iphone-wrap"),
+        $pointer01  : $("#pointer01"),
+        $pointer0102 : $("#pointer01-02"),
+        $pointer02   : $("#pointer02"),
+        $type02 : $("#typing-2")
     };
 
     var pages = UI.$zhiliaoPage.children(".section")
@@ -32,6 +40,14 @@ define(function (require, exports, module) {
                 $(p).removeClass("animated");
             }
         }
+
+
+    }
+
+    var toggleSlide = function(num){
+        var lis  =  UI.$zhiliaoNav.find("li");
+        lis.removeClass("active");
+        lis.eq(num).addClass("active");
     }
 
 
@@ -45,10 +61,24 @@ define(function (require, exports, module) {
                 navigationPosition: 'right',
 
                 onLeave : function(){
-//                    console.log("leave...");
+                    console.log("leave...");
                 },
                 afterLoad : function(anchorLink,index){
                      getPage(index);
+
+                     //3幅图片hack
+                     if(index == "2" || index == "4"){
+                         UI.$sendVoice.removeClass("send-voice-ani-02").addClass("send-voice-ani-01");
+                         UI.$sendTime.removeClass("send-time-ani-02").addClass("send-time-ani-01");
+                     }
+
+                     if(index == "1" || index == "3"){
+                         toggleSlide(0);
+                         UI.$inputWrap.removeClass("bg-02-slide").addClass("bg-02-slide-rev");
+                     }
+                },
+                afterRender : function(){
+                    console.log("render...");
                 }
             });
 
@@ -58,8 +88,57 @@ define(function (require, exports, module) {
 
 
     var Ajax = {
+    }
+
+
+    var AnimEnd   = 'animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oAnimationEnd';
+    var AnimStart   = 'animationstart webkitAnimationStart mozAnimationStart MSAnimationStart oAnimationStart';
+
+
+
+
+
+    //animation
+    var sendVoiceAnimation  = function(){
+        console.log("set");
+        UI.$sendVoice.removeClass("send-voice-ani-01")
+            .addClass("send-voice-ani-02");
+    }
+
+
+    var sendTimeAnimation  = function(){
+        console.log("执行完成...");
+        UI.$sendTime.removeClass("send-time-ani-01")
+            .addClass("send-time-ani-02");
+    }
+
+
+    //滑动animation pointer01
+    var   slideAnimation = function(event){
+        toggleSlide(1);
+        UI.$inputWrap.removeClass("bg-02-slide-rev").addClass("bg-02-slide");
 
     }
+
+    //滑动animation pointer02
+    var   slideAnimation02 = function(event){
+        toggleSlide(0);
+        UI.$inputWrap.removeClass("bg-02-slide").addClass("bg-02-slide-rev");
+
+    }
+
+
+
+
+
+    UI.$sendTime.bind(AnimEnd,sendTimeAnimation);
+    //第二张图片切换 第一步与第二步
+    UI.$pointer01.bind(AnimEnd,slideAnimation);
+    UI.$pointer0102.bind(AnimEnd,slideAnimation02);
+
+    //第三图片点
+    UI.$pointer02.bind(AnimEnd,sendVoiceAnimation);
+
 
     Event.init();
 });
