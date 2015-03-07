@@ -137,4 +137,42 @@ h1, h2, h3, h4, h5 {
   .bg.bg-06 {
     background: #f4f4f4; }
 
+/** loading hack **/
+.mp_loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #415f9d;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  z-index: 999; }
+
+.loading {
+  background-image: url("../../imgs/loading.gif");
+  background-size: 155px 40px;
+  width: 155px;
+  height: 40px; }
+
+.mp_loading_clip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -79.5px;
+  margin-top: -20px;
+  overflow: hidden; }
+
+.mp_loading_txt {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  margin-left: -50px;
+  margin-top: 30px; }
+
 /*# sourceMappingURL=template.css.map */

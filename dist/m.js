@@ -144,8 +144,6 @@ define(function (require, exports, module) {
             UI.downHref.click(function(){
                 $.fn.fullpage.moveTo(6);
             });
-
-            $("#zhiliaoPage").show();
         }
     }
 
@@ -201,17 +199,13 @@ define(function (require, exports, module) {
 
 
 
-    if(!window.ltie8){
-        //图片加载器
-        new loader.loadermsk(imgList, "#415f9d",function(){
-            Event.init();
-        });
-    }
-    else{
-        Event.init();
-    }
 
+    //图片加载器
+    new loader.loadermsk(imgList, "#415f9d",function(){
 
+    });
+
+    Event.init();
 });
 
 
