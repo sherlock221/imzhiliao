@@ -1,0 +1,30 @@
+.pointer{
+    display: none;
+}
+
+
+.chat-hd-01,.chat-hd-02{
+    opacity : 1;
+}
+.chat-message-02, .chat-message-01{
+    opacity : 1;
+}
+.chat-list-head span{
+    opacity : 1;;
+}
+
+
+
+.big-circle{
+    opacity : 1;
+}
+.middle-circle{
+    opacity : 1;
+}
+.safe{
+    opacity : 1;
+}
+
+.safe-head-01,.safe-head-02,.safe-head-03{
+    opacity : 1;
+}

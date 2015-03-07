@@ -467,8 +467,7 @@ nav.nav {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #f59955;
-  display: none\0; }
+  background: #f59955; }
 
 .pointer01 {
   position: absolute;
@@ -749,32 +748,25 @@ nav.nav {
     -ms-transform: scale(2);
     opacity: 0; } }
 .chat-hd-01, .chat-hd-02 {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .chat-message-02, .chat-message-01 {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .chat-list-head span {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .big-circle {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .middle-circle {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .safe {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .safe-head-01, .safe-head-02, .safe-head-03 {
-  opacity: 0;
-  opacity: 1\9\0; }
+  opacity: 0; }
 
 .section.animated .bg-02 .pointer01 {
   -webkit-animation: pointer-animate 0.4s ease-in 0.2s both;

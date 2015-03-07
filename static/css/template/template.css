@@ -83,7 +83,8 @@ a:hover {
   width: 1002px;
   margin: 0 auto;
   height: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 header {
   background: #ffffff;
