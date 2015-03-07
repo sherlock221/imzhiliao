@@ -11,7 +11,7 @@ seajs.config({
     alias: {
         "$": "sea-modules/jquery/1.9.1/jquery.min.js",
         "_" : "sea-modules/underscore/1.6.0/underscore-min.js",
-        "full-page" : "sea-modules/fullpage/jquery.fullPage.js"
+        "full-page" : "sea-modules/fullpage/jquery.fullPage.min.js"
     },
 
     //更新时间戳

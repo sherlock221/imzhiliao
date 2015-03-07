@@ -63,6 +63,7 @@
 
 .big-circle {
   background-position: 0 -760px;
+  background-position: 0 -761px;
   width: 268px;
   height: 268px;
   position: relative;
@@ -526,8 +527,7 @@ nav.nav {
 
 .safe-head-02 {
   position: absolute;
-  bottom: -18px;
-  left: -13px;
+  bottom: -23px;
   z-index: 10; }
 
 .safe-head-03 {

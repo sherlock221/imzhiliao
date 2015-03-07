@@ -3,22 +3,9 @@
     "spm": {
         "include": "all",
         "alias" : {
-            "$": "core/jquery/2.1.1/jquery-2.1.1.min.js",
-            "tmp": "template/artTemplate/template-native.js",
-            "_": "util/underscore/1.6.0/underscore-min.js",
-            "bootstrap3": "core/bootstrap3/bootstrap.js",
-            "lock": "util/lock/lock.js",
-            "audio_base" : "media/audio/audio-base/audio-base.js",
-            "coffee"     : "core/zepto/zepto_coffee.js",
-
-            "jd_scroll"  : "scroll/jd/jd_scroll.js",
-            "loop_world" : "ui/loop_world/loopWorld.js",
-            "down-anything" : "ui/down-anything/down-anything.js",
-            "baidu_map_script"  :"http://api.map.baidu.com/api?type=quick&ak=CUS6Wmlpd5rOHmVyklkpEtY2&v=1.0",
-            "baidu_map"  :"map/baidu/baidu-map.js",
-            "lottery"  : "ui/lottery/lottery.js",
-            "anFrame"  : "util/aniamtionFrame/requestAnimationFrame.js",
-            "textani"  : "ui/text/jquery.textillate.js"
+            "$": "sea-modules/jquery/1.9.1/jquery.min.js",
+            "_" : "sea-modules/underscore/1.6.0/underscore-min.js",
+            "full-page" : "sea-modules/fullpage/jquery.fullPage.js"
         }
     }
 }

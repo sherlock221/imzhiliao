@@ -1,64 +1,73 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        as : grunt.file.readJSON('alias.json'),
-        transport: {
-            options : {
-                paths: ['source/js/sea-modules'],
-                alias: '<%= as.spm.alias %>'
-            },
 
-            //loop 项目打包
-            loop: {
-                files : [
-                    {
-                        expand: true,
-                        cwd :  "source/js/sea-modules",
-                        src : [
-                            "core/jquery/1.9.1/jquery.js",
-                            "ui/loop_world/loopWorld.js",
-                            "service/loop.js"
-                        ],
-                        dest : './build/transport'
-                    }
-                ]
+        pkg: grunt.file.readJSON('package.json'),
+        as: grunt.file.readJSON('alias.json'),
+        transport: {
+            options: {
+                paths: ['static/js/sea-modules'],
+                alias: '<%= as.spm.alias %>'
             }
         },
         concat: {
-            options : {
+            options: {
             },
-            loop: {
-                src  : ["./build/transport/**/*.js","!./build/transport/**/*-debug.js"],
-                dest : "./build/publish/main-debug.js"
+            css: {
+                src: [
+                    "./static/css/template/normalize.css",
+                    "./static/css/template/animate.css",
+                    "./static/css/template/template.css",
+                    "./static/css/plugin/jquery.fullPage.css",
+                    "./static/css/service/index.css",
+                ],
+                dest: "./static/dist/css/tp.css"
+            },
+            js: {
+                src: [
+                    "./static/js/service/index.js"
+                ],
+                dest: "./dist/m.js"
             }
-        },
 
-        uglify : {
-            options : {
-            },
-            loop : {
-                src  : "./build/publish/main-debug.js",
-                dest : "./build/publish/main.js"
-            }
         },
-        clean : {
-            options : {
+        //压缩css
+        cssmin: {
+            css: {
+                options: {
+                    banner: '/* imzhiliao.com by sherlock221b */'
+                },
+                files: {
+                    './static/dist/css/tp.min.css': ['./static/dist/css/tp.css']
+                }
+          }
+        },
+            uglify: {
+                options: {
+                },
+                js: {
+                    src: "./dist/m.js",
+                    dest: "./dist/m.min.js"
+                }
             },
-            build : {
-                src : ['./build/transport']
+            clean: {
+                options: {
+                },
+                build: {
+                    src: ['./build/transport']
+                }
             }
-        }
-    });
+        });
 
 
     grunt.loadNpmTasks('grunt-cmd-transport');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
     //测试打包loop
-    grunt.registerTask('build', ['transport','concat','uglify','clean']);
+    grunt.registerTask('build', ['concat:css', 'cssmin:css','concat:js',"uglify:js"]);
 
 };
