@@ -1,0 +1,11 @@
+{
+    "name": "imzhiliao",
+    "version": "0.5.0",
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-cmd-transport" : "*",
+        "grunt-contrib-clean" : "*",
+        "grunt-contrib-uglify": "*"
+    }
+}

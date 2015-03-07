@@ -311,6 +311,9 @@ nav.nav{
   background-image: url("../../imgs/02/bar.png");
   background-size: 100%  100%;
   text-align: center;
+//  background-repeat:no-repeat\9;
+//  background-image:none\9;
+//  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../imgs/02/bar.png',sizingMethod='scale');
 }
 
 .send-bg-main{
