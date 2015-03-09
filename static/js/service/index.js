@@ -79,7 +79,8 @@ define(function (require, exports, module) {
         $pointer0102 : $("#pointer01-02"),
         $pointer02   : $("#pointer02"),
         $type02 : $("#typing-2"),
-        downHref  : $("#downHref")
+        downHref  : $("#downHref"),
+        $start    : $("#start")
     };
 
 
@@ -124,15 +125,13 @@ define(function (require, exports, module) {
 
     var Event = {
         init : function(){
-
-
             //初始化全屏
             UI.$zhiliaoPage.fullpage({
                 navigation : true,
                 navigationPosition: 'right',
 
                 onLeave : function(){
-                    console.log("leave...");
+                    //console.log("leave...");
                 },
                 afterLoad : function(anchorLink,index){
                      getPage(index);
@@ -149,12 +148,18 @@ define(function (require, exports, module) {
                      }
                 },
                 afterRender : function(){
-                    console.log("render...");
+
                 }
             });
             UI.downHref.click(function(){
                 $.fn.fullpage.moveTo(6);
             });
+
+
+            //开始
+            UI.$start.click(function(){
+                $.fn.fullpage.moveTo(2);
+            })
 
             $("#zhiliaoPage").show();
         }
@@ -174,14 +179,14 @@ define(function (require, exports, module) {
 
     //animation
     var sendVoiceAnimation  = function(){
-        console.log("set");
+        //console.log("set");
         UI.$sendVoice.removeClass("send-voice-ani-01")
             .addClass("send-voice-ani-02");
     }
 
 
     var sendTimeAnimation  = function(){
-        console.log("执行完成...");
+        //console.log("执行完成...");
         UI.$sendTime.removeClass("send-time-ani-01")
             .addClass("send-time-ani-02");
     }
