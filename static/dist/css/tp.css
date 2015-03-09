@@ -4252,7 +4252,6 @@ html, body {
   height: 61px; }
 
 .big-circle {
-  background-position: 0 -760px;
   background-position: 0 -761px;
   width: 268px;
   height: 268px;
@@ -4300,6 +4299,9 @@ html, body {
   width: 333px;
   height: 66px;
   background-position: 0 -596px; }
+
+#zhiliaoPage {
+  display: none; }
 
 #zhiliaoPage > .section {
   overflow: hidden; }
@@ -4964,6 +4966,18 @@ nav.nav {
   -moz-animation: pointer-animate 0.4s ease-in 0.2s both;
   -o-animation: pointer-animate 0.4s ease-in 0.2s both;
   animation: pointer-animate 0.4s ease-in 0.2s both; }
+.section.animated .bg-02 #zhiliao-nav-circle-02 {
+  -webkit-animation: fadeOut 0.4s ease-in 0.6s both;
+  -ms-animation: fadeOut 0.4s ease-in 0.6s both;
+  -moz-animation: fadeOut 0.4s ease-in 0.6s both;
+  -o-animation: fadeOut 0.4s ease-in 0.6s both;
+  animation: fadeOut 0.4s ease-in 0.6s both; }
+.section.animated .bg-02 #zhiliao-nav-circle-01 {
+  -webkit-animation: fadeOut 0.4s ease-in 2s both;
+  -ms-animation: fadeOut 0.4s ease-in 2s both;
+  -moz-animation: fadeOut 0.4s ease-in 2s both;
+  -o-animation: fadeOut 0.4s ease-in 2s both;
+  animation: fadeOut 0.4s ease-in 2s both; }
 .section.animated .bg-02 .pointer01-02 {
   -webkit-animation: pointer-animate 0.4s ease-in 1.6s both;
   -ms-animation: pointer-animate 0.4s ease-in 1.6s both;

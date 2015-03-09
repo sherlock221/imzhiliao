@@ -101,6 +101,10 @@
   opacity: 0;
 }
 
+#zhiliao-nav-circle-01,#zhiliao-nav-circle-02{
+
+}
+
 
 
 //触发动画
@@ -112,6 +116,15 @@
       .pointer01{
         @include animation(pointer-animate 0.4s ease-in 0.2s both );
       }
+
+      //取消红点
+      #zhiliao-nav-circle-02{
+        @include animation(fadeOut 0.4s ease-in 0.6s both );
+      }
+      #zhiliao-nav-circle-01{
+        @include animation(fadeOut 0.4s ease-in 2s both );
+      }
+
 //      //接下来滑动
 //      .iphone-wrap{
 //        @include animation(bg-02-slide 0.6s ease 1s  1 both );

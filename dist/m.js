@@ -47,11 +47,22 @@ define(function (require, exports, module) {
     //检测retain屏幕
     if(window.devicePixelRatio > "1.5"){
 
+        imgList.push("../static/imgs/ui@2x.png");
+
+        imgList.push("../static/imgs/03/2x/voice.png");
+        imgList.push("../static/imgs/03/2x/select.png");
+        imgList.push("../static/imgs/03/2x/publish.png");
+
+        imgList.push("../static/imgs/02/2x/all.jpg");
+        imgList.push("../static/imgs/02/2x/teacher.jpg");
+        imgList.push("../static/imgs/02/2x/bar.jpg");
+
     }
     else{
         imgList.push("../static/imgs/ui.png");
         imgList.push("../static/imgs/03/voice.png");
         imgList.push("../static/imgs/03/select.png");
+        imgList.push("../static/imgs/03/publish.png");
         imgList.push("../static/imgs/02/all.png");
         imgList.push("../static/imgs/02/teacher.png");
         imgList.push("../static/imgs/02/bar.png");
@@ -68,7 +79,8 @@ define(function (require, exports, module) {
         $pointer0102 : $("#pointer01-02"),
         $pointer02   : $("#pointer02"),
         $type02 : $("#typing-2"),
-        downHref  : $("#downHref")
+        downHref  : $("#downHref"),
+        $start    : $("#start")
     };
 
 
@@ -113,15 +125,13 @@ define(function (require, exports, module) {
 
     var Event = {
         init : function(){
-
-
             //初始化全屏
             UI.$zhiliaoPage.fullpage({
                 navigation : true,
                 navigationPosition: 'right',
 
                 onLeave : function(){
-                    console.log("leave...");
+                    //console.log("leave...");
                 },
                 afterLoad : function(anchorLink,index){
                      getPage(index);
@@ -138,12 +148,20 @@ define(function (require, exports, module) {
                      }
                 },
                 afterRender : function(){
-                    console.log("render...");
+
                 }
             });
             UI.downHref.click(function(){
                 $.fn.fullpage.moveTo(6);
             });
+
+
+            //开始
+            UI.$start.click(function(){
+                $.fn.fullpage.moveTo(2);
+            })
+
+            $("#zhiliaoPage").show();
         }
     }
 
@@ -161,14 +179,14 @@ define(function (require, exports, module) {
 
     //animation
     var sendVoiceAnimation  = function(){
-        console.log("set");
+        //console.log("set");
         UI.$sendVoice.removeClass("send-voice-ani-01")
             .addClass("send-voice-ani-02");
     }
 
 
     var sendTimeAnimation  = function(){
-        console.log("执行完成...");
+        //console.log("执行完成...");
         UI.$sendTime.removeClass("send-time-ani-01")
             .addClass("send-time-ani-02");
     }
@@ -199,13 +217,17 @@ define(function (require, exports, module) {
 
 
 
+    if(!window.ltie8){
+        //图片加载器
+        new loader.loadermsk(imgList, "#415f9d",function(){
+            Event.init();
+        });
+    }
+    else{
+        Event.init();
+    }
 
-    //图片加载器
-    new loader.loadermsk(imgList, "#415f9d",function(){
 
-    });
-
-    Event.init();
 });
 
 
