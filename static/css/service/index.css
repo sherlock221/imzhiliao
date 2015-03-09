@@ -788,6 +788,12 @@ nav.nav {
   -moz-animation: fadeOut 0.4s ease-in 2s both;
   -o-animation: fadeOut 0.4s ease-in 2s both;
   animation: fadeOut 0.4s ease-in 2s both; }
+.section.animated .bg-02 #zhiliao-nav-circle-03 {
+  -webkit-animation: fadeOut 0.4s ease-in 2s both;
+  -ms-animation: fadeOut 0.4s ease-in 2s both;
+  -moz-animation: fadeOut 0.4s ease-in 2s both;
+  -o-animation: fadeOut 0.4s ease-in 2s both;
+  animation: fadeOut 0.4s ease-in 2s both; }
 .section.animated .bg-02 .pointer01-02 {
   -webkit-animation: pointer-animate 0.4s ease-in 1.6s both;
   -ms-animation: pointer-animate 0.4s ease-in 1.6s both;

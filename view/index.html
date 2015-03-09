@@ -44,11 +44,11 @@
     <script type="text/javascript" src="../static/js/sea-modules/seajs_config.js"></script>
 
     <!--tp css  -->
-    <link href="../static/dist/css/tp.min.css?v=106" rel="stylesheet" type="text/css"/>
+    <link href="../static/dist/css/tp.min.css?v=108" rel="stylesheet" type="text/css"/>
 
     <!-- ie hack -->
     <!--[if lt IE 10]>
-        <link href="../static/css/iehack/ie8-9.css?v=106" rel="stylesheet" type="text/css"/>
+        <link href="../static/css/iehack/ie8-9.css?v=108" rel="stylesheet" type="text/css"/>
     <![endif]-->
 
 </head>
@@ -165,7 +165,7 @@
 
                                         <li>
                                             <a href="javascript:void(0)">家长
-                                                <span class="ib zhiliao-nav-circle ui-img point-circle active"></span>
+                                                <span class="ib zhiliao-nav-circle ui-img point-circle active" id="zhiliao-nav-circle-03"></span>
                                             </a>
                                         </li>
 
@@ -248,7 +248,7 @@
 
                 <div class="db-cell-middle text-right">
                     <h2 class="title-font">
-                        贴心的功能,<span class="active">简易</span>的操作<br/>
+                        贴心的功能&nbsp;,&nbsp;<span class="active">简易</span>的操作<br/>
                         让互动更直接
                     </h2>
 
@@ -371,7 +371,7 @@
                        <span ></span>共建 <span class="active">安全</span>的班级圈
                     </h2>
 
-                    <div>
+                    <div style="display:none;">
                         <span class="ib phone-ve">
                             手机实名认证
                         </span>
@@ -431,8 +431,8 @@
             </div>
 
             <div class="db-row">
-                <div class="db-cell-middle">
-                    <footer >
+                <div class="db-cell-middle" style="height:140px;">
+                    <footer style="margin-top:16px;">
                             <div class="text-center">
                                 <div>
                                     <ul class="company ib">
@@ -443,17 +443,17 @@
                                             <a href="javascript:void(0)">联系我们</a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0)" class="last">用户协议</a>
+                                            <a href="javascript:void(0)" class="">用户协议</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="last">关注我们</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="text-center">
                                 <p class="copyright">
-                                    Copyright © imzhiliao.com. All rights reserved
-                                </p>
-                                <p class="attention">
-                                    关注我们
+                                    Copyright © imzhiliao.com. All rights reserved  | 京ICP备14061569号
                                 </p>
                             </div>
                     </footer>
@@ -469,6 +469,6 @@
 </body>
 
 <script type="text/javascript">
-    seajs.use("service/index.js?v=106");
+    seajs.use("service/index.js?v=108");
 </script>
 </html>

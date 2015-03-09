@@ -3921,17 +3921,20 @@ footer .company {
     float: left; }
     footer .company li a {
       display: block;
-      color: #343434;
+      color: #7b7b7b;
+      font-size: 14px;
       margin-right: 16px; }
       footer .company li a:after {
         content: "|";
         display: inline-block;
-        color: #dadada;
+        color: #7b7b7b;
+        font-size: 14px;
         margin-left: 16px; }
       footer .company li a.last:after {
         content: ""; }
 footer .copyright {
-  color: #343434; }
+  font-size: 11px;
+  color: #7b7b7b; }
 footer .attention {
   color: #343434;
   margin-bottom: 0; }
@@ -3949,13 +3952,13 @@ h1, h2, h3, h4, h5 {
   .bg.bg-01 {
     background-image: url("../../imgs/bg-01.jpg"); }
   .bg.bg-02 {
-    background-image: url("../../imgs/bg-02.jpg"); }
+    background: #fafafa; }
   .bg.bg-03 {
     background-image: url("../../imgs/bg-03.jpg"); }
   .bg.bg-04 {
     background-image: url("../../imgs/bg-04.jpg"); }
   .bg.bg-05 {
-    background-image: url("../../imgs/bg-05.jpg"); }
+    background-image: url("../../imgs/bg-02.jpg"); }
   .bg.bg-06 {
     background: #f4f4f4; }
 
@@ -4973,6 +4976,12 @@ nav.nav {
   -o-animation: fadeOut 0.4s ease-in 0.6s both;
   animation: fadeOut 0.4s ease-in 0.6s both; }
 .section.animated .bg-02 #zhiliao-nav-circle-01 {
+  -webkit-animation: fadeOut 0.4s ease-in 2s both;
+  -ms-animation: fadeOut 0.4s ease-in 2s both;
+  -moz-animation: fadeOut 0.4s ease-in 2s both;
+  -o-animation: fadeOut 0.4s ease-in 2s both;
+  animation: fadeOut 0.4s ease-in 2s both; }
+.section.animated .bg-02 #zhiliao-nav-circle-03 {
   -webkit-animation: fadeOut 0.4s ease-in 2s both;
   -ms-animation: fadeOut 0.4s ease-in 2s both;
   -moz-animation: fadeOut 0.4s ease-in 2s both;

@@ -142,12 +142,14 @@ footer{
       float: left;
       a{
         display: block;
-        color: #343434;
+        color: #7b7b7b;
+        font-size: 14px;
 
         &:after{
           content: "|";
           display: inline-block;
-          color: #dadada;
+          color: #7b7b7b;
+          font-size: 14px;
           margin-left: 16px;
 
         }
@@ -163,7 +165,9 @@ footer{
   }
 
   .copyright{
-    color: #343434;
+    font-size: 11px;
+    color: #7b7b7b;
+
   }
 
   .attention{
@@ -195,7 +199,8 @@ h1,h2,h3,h4,h5{
   }
 
   &.bg-02{
-    background-image: url("../../imgs/bg-02.jpg");
+//    background-image: url("../../imgs/bg-02.jpg");
+    background : #fafafa;
   }
 
   &.bg-03{
@@ -205,7 +210,8 @@ h1,h2,h3,h4,h5{
     background-image: url("../../imgs/bg-04.jpg");
   }
   &.bg-05{
-    background-image: url("../../imgs/bg-05.jpg");
+//    background-image: url("../../imgs/bg-05.jpg");
+    background-image: url("../../imgs/bg-02.jpg");
   }
   &.bg-06{
     background: #f4f4f4;

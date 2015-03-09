@@ -124,6 +124,9 @@
       #zhiliao-nav-circle-01{
         @include animation(fadeOut 0.4s ease-in 2s both );
       }
+    #zhiliao-nav-circle-03{
+      @include animation(fadeOut 0.4s ease-in 2s both );
+    }
 
 //      //接下来滑动
 //      .iphone-wrap{
