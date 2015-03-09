@@ -4287,8 +4287,8 @@ html, body {
   left: 61px; }
 
 .timer-slice {
-  width: 571px;
-  height: 88px;
+  width: 489px;
+  height: 75px;
   background-position: 0 -422px;
   margin-top: 115px;
   margin-left: -76px; }
@@ -4748,6 +4748,9 @@ nav.nav {
   overflow: hidden;
   margin-top: 10px;
   opacity: 0; }
+
+.real-margin {
+  margin-top: 10px; }
 
 /** 保持结束帧 **/
 .an-util-forwards {
