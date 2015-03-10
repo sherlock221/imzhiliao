@@ -3908,6 +3908,9 @@ a:hover {
   position: relative;
   overflow: hidden; }
 
+.cursor-default {
+  cursor: default; }
+
 header {
   background: #ffffff;
   height: 60px;
