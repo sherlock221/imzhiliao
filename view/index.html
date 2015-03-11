@@ -4,11 +4,11 @@
 
     <!-- 基本配置信息 -->
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="renderer" content="webkit" />
 
     <!--[if lt IE 9]>
@@ -21,7 +21,6 @@
         window.ltie8 = true;
     </script>
     <![endif]-->
-
 
     <link href="../static/imgs/favicon-32_32.ico" type="image/x-icon" rel=icon />
     <link href="../static/imgs/favicon-32_32.ico" type="image/x-icon" rel="shortcut icon" />
@@ -44,11 +43,11 @@
     <script type="text/javascript" src="../static/js/sea-modules/seajs_config.js"></script>
 
     <!--tp css  -->
-    <link href="../static/dist/css/tp.min.css?v=110" rel="stylesheet" type="text/css"/>
+    <link href="../static/dist/css/tp.min.css?v=112" rel="stylesheet" type="text/css"/>
 
     <!-- ie hack -->
     <!--[if lt IE 10]>
-        <link href="../static/css/iehack/ie8-9.css?v=110" rel="stylesheet" type="text/css"/>
+        <link href="../static/css/iehack/ie8-9.css?v=112" rel="stylesheet" type="text/css"/>
     <![endif]-->
 
 </head>
@@ -71,14 +70,14 @@
                     <nav class=" nav db-cell-middle">
                         <ul class="ovh">
                             <li class="active">
-                                <a href="javascript:void(0);">首页</a>
+                                <a href="index.html">首页</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">关于我们</a>
+                                <a href="about.html">关于我们</a>
                             </li>
-                            <li class="last-nav">
-                                <a href="javascript:void(0);">帮助中心</a>
-                            </li>
+                            <!--<li class="last-nav">-->
+                                <!--<a href="javascript:void(0);">帮助中心</a>-->
+                            <!--</li>-->
                         </ul>
                     </nav>
                 </div>
@@ -87,7 +86,6 @@
         </section>
     </header>
     <section class="bg bg-01">
-
         <div class="container">
             <div class="db">
                 <div class="db-cell-middle">
@@ -193,7 +191,6 @@
 
 
     </section>
-
 </div>
 <div id="page03" class="section">
 
@@ -264,7 +261,6 @@
 
 
     </section>
-
 </div>
 <div id="page04" class="section">
 
@@ -336,8 +332,9 @@
         </div>
 
 
-    </section>
 
+
+    </section>
 </div>
 <div id="page05" class="section">
     <section class="bg bg-05">
@@ -433,29 +430,48 @@
             <div class="db-row">
                 <div class="db-cell-middle" style="height:140px;">
                     <footer style="margin-top:16px;">
-                            <div class="text-center">
-                                <div>
-                                    <ul class="company ib">
-                                        <li>
-                                            <a href="javascript:void(0)">北京蝉鸣信息科技有限公司</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">联系我们</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="">用户协议</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="last">关注我们</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <div class="text-center">
+                            <div>
+                                <ul class="company ib">
+                                    <li>
+                                        <a href="javascript:void(0)">北京蝉鸣信息科技有限公司</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">联系我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="">用户协议</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="last pos-rel">关注我们
+                                            <div class="ib hover">
+
+                                                <span class="ib hover-icon " onclick="window.location.href='http://weibo.com/imzhiliao'">
+                                                    <i class="ib  ui-img weibo wx"></i>
+                                                </span>
+                                                 <span class="ib hover-icon">
+                                                    <i class="ib  ui-img weixin wx"></i>
+                                                      <div class="ib weixin-code">
+                                                          <img src="../static/imgs/weixn-code.png" width="75" height="81" />
+                                                      </div>
+                                                </span>
+
+
+
+                                            </div>
+
+                                        </a>
+
+                                    </li>
+
+                                </ul>
                             </div>
-                            <div class="text-center">
-                                <p class="copyright">
-                                    Copyright © imzhiliao.com. All rights reserved  | 京ICP备14061569号
-                                </p>
-                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p class="copyright">
+                                Copyright © imzhiliao.com. All rights reserved  | 京ICP备14061569号
+                            </p>
+                        </div>
                     </footer>
                 </div>
             </div>
@@ -469,6 +485,6 @@
 </body>
 
 <script type="text/javascript">
-    seajs.use("service/index.js?v=110");
+    seajs.use("service/index.js?v=112");
 </script>
 </html>

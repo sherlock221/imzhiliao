@@ -110,6 +110,21 @@
   height: 66px;
   background-position: 0 -596px; }
 
+.weibo {
+  width: 24px;
+  height: 17px;
+  background-position: 0 -548px; }
+  .weibo:hover {
+    background-position: 0 -531px; }
+
+.weixin {
+  width: 24px;
+  height: 18px;
+  background-position: -24px -513px;
+  left: 3px; }
+  .weixin:hover {
+    background-position: 0 -513px; }
+
 #zhiliaoPage {
   display: none; }
 

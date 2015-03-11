@@ -103,7 +103,9 @@ a:hover{
   vertical-align: middle;
 }
 
-
+.vt{
+  vertical-align: top;
+}
 
 .height-ih{
   height: inherit;
@@ -125,6 +127,9 @@ a:hover{
   cursor : default;
 }
 
+.pos-rel{
+  position: relative;
+}
 
 
 //header
@@ -141,7 +146,7 @@ footer{
 
   .company{
     clear: both;
-    overflow: hidden;
+//    overflow: hidden;
     margin-left: 32px;
 
     li{
@@ -180,6 +185,73 @@ footer{
     color: #343434;
     margin-bottom: 0;
   }
+
+
+
+  .hover{
+    position: absolute;
+    top: -9px;
+    left: 68px;
+    width: 100px;
+    text-align: left;
+    margin-left: 10px;
+
+    .weixin-code{
+      position: absolute;
+      top: -84px;
+      right: -5px;
+      display: none;
+      @include animation(fadeIn 1.2s  ease 0s  1 both);
+    }
+
+    .hover-icon{
+      background: #ffffff;
+      border-radius: 60px;
+      width: 34px;
+      height: 34px;
+      text-align: center;
+      cursor: pointer;
+      margin-right: 12px;
+
+
+      &:hover{
+        background: #8b8b8b;
+
+        .weixin-code{
+          display: inline-block !important;
+        }
+
+
+        .weixin{
+          &:hover{
+            background-position: 0 -513px;
+
+          }
+        }
+
+        .weibo{
+          &:hover{
+            background-position: 0 -531px;
+          }
+        }
+
+
+      }
+
+
+    }
+
+
+  }
+
+
+
+
+  .wx{
+    position: relative;
+    top: 8px;
+  }
+
 }
 
 

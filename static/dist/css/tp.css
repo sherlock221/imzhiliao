@@ -3898,6 +3898,9 @@ a:hover {
   display: table-cell;
   vertical-align: middle; }
 
+.vt {
+  vertical-align: top; }
+
 .height-ih {
   height: inherit; }
 
@@ -3911,6 +3914,9 @@ a:hover {
 .cursor-default {
   cursor: default; }
 
+.pos-rel {
+  position: relative; }
+
 header {
   background: #ffffff;
   height: 60px;
@@ -3918,7 +3924,6 @@ header {
 
 footer .company {
   clear: both;
-  overflow: hidden;
   margin-left: 32px; }
   footer .company li {
     float: left; }
@@ -3941,6 +3946,42 @@ footer .copyright {
 footer .attention {
   color: #343434;
   margin-bottom: 0; }
+footer .hover {
+  position: absolute;
+  top: -9px;
+  left: 68px;
+  width: 100px;
+  text-align: left;
+  margin-left: 10px; }
+  footer .hover .weixin-code {
+    position: absolute;
+    top: -84px;
+    right: -5px;
+    display: none;
+    -webkit-animation: fadeIn 1.2s ease 0s 1 both;
+    -ms-animation: fadeIn 1.2s ease 0s 1 both;
+    -moz-animation: fadeIn 1.2s ease 0s 1 both;
+    -o-animation: fadeIn 1.2s ease 0s 1 both;
+    animation: fadeIn 1.2s ease 0s 1 both; }
+  footer .hover .hover-icon {
+    background: #ffffff;
+    border-radius: 60px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 12px; }
+    footer .hover .hover-icon:hover {
+      background: #8b8b8b; }
+      footer .hover .hover-icon:hover .weixin-code {
+        display: inline-block !important; }
+      footer .hover .hover-icon:hover .weixin:hover {
+        background-position: 0 -513px; }
+      footer .hover .hover-icon:hover .weibo:hover {
+        background-position: 0 -531px; }
+footer .wx {
+  position: relative;
+  top: 8px; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -4305,6 +4346,21 @@ html, body {
   width: 333px;
   height: 66px;
   background-position: 0 -596px; }
+
+.weibo {
+  width: 24px;
+  height: 17px;
+  background-position: 0 -548px; }
+  .weibo:hover {
+    background-position: 0 -531px; }
+
+.weixin {
+  width: 24px;
+  height: 18px;
+  background-position: -24px -513px;
+  left: 3px; }
+  .weixin:hover {
+    background-position: 0 -513px; }
 
 #zhiliaoPage {
   display: none; }
