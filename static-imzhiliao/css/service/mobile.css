@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/**
+ * sherlock221b
+ * rem常用设计函数
+ */
+/**
+ * sherlock221b
+ * 动画部分常用
+ */
+html, body {
+  font-family: "Helvetica Neue","Helvetica","STHeiTi","Arial",sans-serif; }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent; }
+
+.cicada-sprite {
+  background-image: url("../../imgs/mobile/mobile.png");
+  background-size: 500px 1000px; }
+
+#cicada-bg {
+  display: none; }
+
+.cicada-title {
+  background-position: 0 0;
+  width: 174px;
+  height: 39px;
+  margin-top: 43px;
+  -webkit-animation: fadeIn 0.8s ease 1.8s 1 both;
+  -ms-animation: fadeIn 0.8s ease 1.8s 1 both;
+  -moz-animation: fadeIn 0.8s ease 1.8s 1 both;
+  -o-animation: fadeIn 0.8s ease 1.8s 1 both;
+  animation: fadeIn 0.8s ease 1.8s 1 both; }
+
+.cicada-desc {
+  background-position: 0 -39px;
+  width: 137px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: flipInX 0.8s ease 2.3s 1 both;
+  -ms-animation: flipInX 0.8s ease 2.3s 1 both;
+  -moz-animation: flipInX 0.8s ease 2.3s 1 both;
+  -o-animation: flipInX 0.8s ease 2.3s 1 both;
+  animation: flipInX 0.8s ease 2.3s 1 both; }
+
+.cicada-logo-bg {
+  background-position: 0 -168px;
+  width: 134px;
+  height: 134px;
+  position: relative;
+  overflow: hidden; }
+
+.cicada-blue {
+  width: 81.5px;
+  height: 97.5px;
+  background-position: -137px -168px;
+  position: absolute;
+  left: 14px;
+  top: 19px;
+  -webkit-animation: jump 1s 0.25s 1 both;
+  -ms-animation: jump 1s 0.25s 1 both;
+  -moz-animation: jump 1s 0.25s 1 both;
+  -o-animation: jump 1s 0.25s 1 both;
+  animation: jump 1s 0.25s 1 both; }
+
+.cicada-og {
+  background-position: -137px -265px;
+  width: 54px;
+  height: 64px;
+  position: absolute;
+  right: 15px;
+  top: 51px;
+  -webkit-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
+  -ms-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
+  -moz-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
+  -o-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
+  animation: jump 1s 0s 1, rubberBand 1s ease 2s; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: scale(0.2) translateY(-439px);
+    -webkit-animation-timing-function: ease-in; }
+  60% {
+    -webkit-transform: scale(0.2) translateY(219px); }
+  100% {
+    -webkit-transform: scale(1) translateY(0);
+    -webkit-animation-timing-function: ease-in-out; } }
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1); }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+button.btn {
+  width: 224px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  font-size: 20px; }
+button.btn-primary {
+  background: #74ca3a; }
+button.btn-primary:active {
+  background: #69b436; }
+
+.logo {
+  position: absolute;
+  top: 13%;
+  width: 100%; }
+
+footer .follow-me {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 80px; }
+  footer .follow-me a {
+    text-decoration: none;
+    color: #868686;
+    font-size: 15px; }
+    footer .follow-me a:hover {
+      color: currentColor;
+      text-decoration: none; }
+    footer .follow-me a.weibo:after {
+      content: "|";
+      margin-right: 25px;
+      margin-left: 25px;
+      color: #a7a7a7; }
+
+.btn-top-dw {
+  margin-top: 80px;
+  margin-bottom: 50px; }
+
+.btn-bottom-dw {
+  margin-top: 40.5px;
+  margin-bottom: 46px; }
+
+.hidden-val {
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px; }
+
+.res-img {
+  width: 100%;
+  height: auto; }
+
+@media screen and (max-height: 480px) {
+  .btn-top-dw {
+    margin-top: 30px; }
+
+  .cicada-title {
+    margin-top: 30px; } }
+
+/*# sourceMappingURL=mobile.css.map */

@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+
+//导入函数部分
+@import "../scss/fun/fun";
+
+html,body{
+  font-family: "Helvetica Neue","Helvetica","STHeiTi","Arial",sans-serif;
+}
+
+*{
+  -webkit-tap-highlight-color : rgba(0,0,0,0);
+  tap-highlight-color : rgba(0,0,0,0);
+}
+
+//sprite图片
+.cicada-sprite{
+  background-image: url("../../imgs/mobile/mobile.png");
+  background-size: rem(1000) rem(2000);
+}
+
+#cicada-bg{
+  display: none;
+}
+
+//标题
+.cicada-title{
+  background-position:  0 0;
+  width: rem(348);
+  height: rem(78);
+
+  margin-top: rem(86);
+
+  @include  animation(fadeIn 0.8s ease 1.8s 1 both);
+}
+
+//描述
+.cicada-desc{
+  background-position: 0 rem(-78);
+  width: rem(274);
+  height: rem(44);
+  margin: 0;
+  padding: 0;
+
+  @include animation( flipInX 0.8s ease 2.3s 1 both);
+}
+
+
+.cicada-logo-bg{
+  background-position: 0 rem(-336) ;
+  width: rem(268);
+  height: rem(268);
+  position: relative;
+  overflow: hidden;
+}
+
+.cicada-blue{
+  width: rem(163);
+  height: rem(195);
+  background-position: rem(-274) rem(-336);
+  position: absolute;
+  left: 14px;
+  top: 19px;
+
+  @include animation(jump 1s  0.25s 1 both);
+
+}
+
+.cicada-og{
+  background-position: rem(-274) rem(-530);
+  width: rem(108);
+  height: rem(128);
+  position: absolute;
+  right: 15px;
+  top: 51px;
+
+  $og-ani : jump 1s 0s 1,rubberBand 1s ease 2s;
+
+  @include animation($og-ani);
+
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1,0,0,90deg);
+    transform: perspective(400px) rotate3d(1,0,0,90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1,0,0,-20deg);
+    transform: perspective(400px) rotate3d(1,0,0,-20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1,0,0,10deg);
+    transform: perspective(400px) rotate3d(1,0,0,10deg);
+    opacity: 1
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1,0,0,-5deg);
+    transform: perspective(400px) rotate3d(1,0,0,-5deg)
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px)
+  }
+}
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: scale(0.2) translateY(-439px);
+    -webkit-animation-timing-function: ease-in
+  }
+  60% {
+    -webkit-transform: scale(0.2) translateY(219px);
+  }
+
+  100%{
+       -webkit-transform: scale(1) translateY(0);  -webkit-animation-timing-function: ease-in-out ;
+  }
+}
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1)
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25,.75,1);
+    transform: scale3d(1.25,.75,1)
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75,1.25,1);
+    transform: scale3d(0.75,1.25,1)
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15,.85,1);
+    transform: scale3d(1.15,.85,1)
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95,1.05,1);
+    transform: scale3d(.95,1.05,1)
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05,.95,1);
+    transform: scale3d(1.05,.95,1)
+  }
+
+  100% {
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1)
+  }
+}
+
+
+
+button{
+
+  &.btn{
+    width: rem(448);
+    height: rem(110);
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-size: rem(40);
+  }
+
+  &.btn-primary{
+    background: #74ca3a;
+  }
+
+  &.btn-primary:active{
+    background: #69b436;
+  }
+
+}
+
+.logo{
+  position: absolute;
+//  top: 90px;
+  top : 13%;
+  width: 100%;
+
+}
+
+footer{
+
+  .follow-me{
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: rem(160);
+
+    a{
+      text-decoration:none;
+      color: #868686;
+      font-size: rem(30);
+
+      &:hover{
+        color: currentColor;
+        text-decoration:none;
+      }
+
+      &.weibo:after{
+        content: "|";
+        margin-right: rem(50);
+        margin-left: rem(50);
+        color: #a7a7a7;
+      }
+    }
+  }
+}
+
+.btn-top-dw{
+  margin-top: rem(160);
+  margin-bottom: rem(100);
+
+}
+
+.btn-bottom-dw{
+  margin-top: rem(81);
+  margin-bottom: rem(92);
+}
+
+.hidden-val {
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px
+}
+
+.res-img{
+  width: 100%;
+  height: auto;
+}
+
+
+
+//480屏幕下hack
+@media screen and (max-height: 480px) {
+
+  .btn-top-dw{
+    margin-top: rem(60);
+  }
+  .cicada-title{
+    margin-top: rem(60);
+  }
+}

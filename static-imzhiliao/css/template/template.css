@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/**
+ * @description 公共部分的CSS
+ * @author   sherlock
+ * @time     1：20
+ */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Helvetica Neue","Hiragino Sans GB", "Microsoft YaHei","微软雅黑",Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  /** 字体颜色 **/
+  color: #ffffff; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  /** 字体颜色 **/
+  color: #333;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+/**
+ * 常用工具类
+ */
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.ib {
+  /** ie8+ **/
+  display: inline-block; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.clearfix {
+  clear: both; }
+
+.hidden-val {
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px; }
+
+.ovh {
+  overflow: hidden; }
+
+.res-img {
+  width: 100%;
+  height: auto; }
+
+.db {
+  display: table;
+  height: inherit;
+  width: 100%; }
+
+.db-row {
+  display: table-row; }
+
+.db-cell-middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+.vt {
+  vertical-align: top; }
+
+.height-ih {
+  height: inherit; }
+
+.container {
+  width: 1002px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.cursor-default {
+  cursor: default; }
+
+.pos-rel {
+  position: relative; }
+
+header {
+  background: #ffffff;
+  height: 60px;
+  width: 100%; }
+
+footer .company {
+  width: 400px;
+  clear: both;
+  margin-left: 32px; }
+  footer .company li {
+    float: left; }
+    footer .company li a {
+      display: block;
+      color: #7b7b7b;
+      font-size: 14px;
+      cursor: default;
+      margin-right: 16px; }
+      footer .company li a:after {
+        content: "|";
+        display: inline-block;
+        color: #7b7b7b;
+        font-size: 14px;
+        margin-left: 16px; }
+      footer .company li a.last:after {
+        content: ""; }
+footer .copyright {
+  font-size: 11px;
+  color: #7b7b7b; }
+footer .attention {
+  color: #343434;
+  margin-bottom: 0; }
+footer .hover {
+  position: absolute;
+  top: -9px;
+  left: 68px;
+  width: 100px;
+  text-align: left;
+  margin-left: 10px; }
+  footer .hover .weixin-code {
+    position: absolute;
+    top: -84px;
+    right: -5px;
+    display: none;
+    -webkit-animation: fadeIn 1.2s ease 0s 1 both;
+    -ms-animation: fadeIn 1.2s ease 0s 1 both;
+    -moz-animation: fadeIn 1.2s ease 0s 1 both;
+    -o-animation: fadeIn 1.2s ease 0s 1 both;
+    animation: fadeIn 1.2s ease 0s 1 both; }
+  footer .hover .hover-icon {
+    background: #ffffff;
+    border-radius: 60px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 12px; }
+    footer .hover .hover-icon:hover {
+      background: #8b8b8b; }
+      footer .hover .hover-icon:hover .weixin-code {
+        display: inline-block !important; }
+      footer .hover .hover-icon:hover .weixin:hover {
+        background-position: 0 -513px; }
+      footer .hover .hover-icon:hover .weibo:hover {
+        background-position: 0 -531px; }
+footer .wx {
+  position: relative;
+  top: 8px; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: normal; }
+
+.bg {
+  background-size: cover;
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  background-position: center center; }
+  .bg.bg-01 {
+    background-image: url("../../imgs/bg-01.jpg"); }
+  .bg.bg-02 {
+    background: #fafafa; }
+  .bg.bg-03 {
+    background-image: url("../../imgs/bg-03.jpg"); }
+  .bg.bg-04 {
+    background-image: url("../../imgs/bg-04.jpg"); }
+  .bg.bg-05 {
+    background-image: url("../../imgs/bg-02.jpg"); }
+  .bg.bg-06 {
+    background: #f4f4f4; }
+
+/** loading hack **/
+.mp_loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #415f9d;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  z-index: 999; }
+
+.loading {
+  background-image: url("../../imgs/loading.gif");
+  background-size: 155px 40px;
+  width: 155px;
+  height: 40px; }
+
+.mp_loading_clip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -79.5px;
+  margin-top: -20px;
+  overflow: hidden; }
+
+.mp_loading_txt {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  margin-left: -50px;
+  margin-top: 30px; }
+
+/*# sourceMappingURL=template.css.map */

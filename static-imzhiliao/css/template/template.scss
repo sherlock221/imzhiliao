@@ -1,0 +1,343 @@
+@charset "utf-8";
+/**
+ * @description 公共部分的CSS
+ * @author   sherlock
+ * @time     1：20
+ */
+
+@import "fun";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  //字体类型
+//  font-family: "Microsoft YaHei","微软雅黑","Helvetica Neue","Hiragino Sans GB", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue","Hiragino Sans GB", "Microsoft YaHei","微软雅黑",Tahoma, Verdana, Arial, Helvetica, sans-serif;
+
+  /** 字体颜色 **/
+  color: #ffffff;
+}
+
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  /** 字体颜色 **/
+  color: #333;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+
+/**
+ * 常用工具类
+ */
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+
+.ib {
+  /** ie8+ **/
+  display: inline-block;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+.hidden-val {
+  height: 0;
+  overflow: hidden;
+
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px
+}
+.ovh{
+  overflow: hidden;
+}
+
+
+.res-img{
+  width: 100%;
+  height: auto;
+}
+
+//table布局
+.db{
+  display: table;
+  height: inherit;
+
+  width: 100%;
+}
+
+.db-row{
+  display: table-row;
+}
+.db-cell-middle{
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.vt{
+  vertical-align: top;
+}
+
+.height-ih{
+  height: inherit;
+}
+
+//容器大小
+.container{
+  width: 1002px;
+  margin:  0 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+//  border:1px solid #dddddd;
+
+}
+
+
+.cursor-default{
+  cursor : default;
+}
+
+.pos-rel{
+  position: relative;
+}
+
+
+//header
+header{
+    background: #ffffff;
+    height: 60px;
+    width: 100%;
+}
+
+
+//footer
+footer{
+
+
+  .company{
+    width: 400px;
+    clear: both;
+//    overflow: hidden;
+    margin-left: 32px;
+
+    li{
+      float: left;
+      a{
+        display: block;
+        color: #7b7b7b;
+        font-size: 14px;
+
+        cursor: default;
+
+
+        &:after{
+          content: "|";
+          display: inline-block;
+          color: #7b7b7b;
+          font-size: 14px;
+          margin-left: 16px;
+
+        }
+
+        margin-right: 16px;
+
+        &.last:after{
+          content: "";
+        }
+
+      }
+    }
+  }
+
+  .copyright{
+    font-size: 11px;
+    color: #7b7b7b;
+
+  }
+
+  .attention{
+    color: #343434;
+    margin-bottom: 0;
+  }
+
+
+
+  .hover{
+    position: absolute;
+    top: -9px;
+    left: 68px;
+    width: 100px;
+    text-align: left;
+    margin-left: 10px;
+
+    .weixin-code{
+      position: absolute;
+      top: -84px;
+      right: -5px;
+      display: none;
+      @include animation(fadeIn 1.2s  ease 0s  1 both);
+    }
+
+    .hover-icon{
+      background: #ffffff;
+      border-radius: 60px;
+      width: 34px;
+      height: 34px;
+      text-align: center;
+      cursor: pointer;
+      margin-right: 12px;
+
+
+      &:hover{
+        background: #8b8b8b;
+
+        .weixin-code{
+          display: inline-block !important;
+        }
+
+
+        .weixin{
+          &:hover{
+            background-position: 0 -513px;
+
+          }
+        }
+
+        .weibo{
+          &:hover{
+            background-position: 0 -531px;
+          }
+        }
+
+
+      }
+
+
+    }
+
+
+  }
+
+
+
+
+  .wx{
+    position: relative;
+    top: 8px;
+  }
+
+}
+
+
+h1,h2,h3,h4,h5{
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+
+
+//背景图片
+.bg{
+    background-size: cover;
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    background-position: center center;
+
+  &.bg-01{
+    background-image: url("../../imgs/bg-01.jpg");
+  }
+
+  &.bg-02{
+//    background-image: url("../../imgs/bg-02.jpg");
+    background : #fafafa;
+  }
+
+  &.bg-03{
+    background-image: url("../../imgs/bg-03.jpg");
+  }
+  &.bg-04{
+    background-image: url("../../imgs/bg-04.jpg");
+  }
+  &.bg-05{
+//    background-image: url("../../imgs/bg-05.jpg");
+    background-image: url("../../imgs/bg-02.jpg");
+  }
+  &.bg-06{
+    background: #f4f4f4;
+  }
+
+}
+
+
+
+//loading
+/** loading hack **/
+.mp_loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #415f9d;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  z-index: 999; }
+
+.loading {
+  background-image: url("../../imgs/loading.gif");
+  background-size: 155px 40px;
+  width: 155px;
+  height: 40px; }
+
+.mp_loading_clip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -79.5px;
+  margin-top: -20px;
+  overflow: hidden; }
+
+.mp_loading_txt {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  margin-left: -50px;
+  margin-top: 30px; }
