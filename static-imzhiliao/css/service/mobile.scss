@@ -7,6 +7,9 @@
 html,body{
   font-family: "Helvetica Neue","Helvetica","STHeiTi","Arial",sans-serif;
 }
+.block{
+ display: block;
+}
 
 *{
   -webkit-tap-highlight-color : rgba(0,0,0,0);
@@ -55,14 +58,17 @@ html,body{
 }
 
 .cicada-blue{
-  width: rem(163);
-  height: rem(195);
-  background-position: rem(-274) rem(-336);
+//  width: rem(163);
+  width: rem(164);
+//  height: rem(195);
+  height: rem(199);
+//  background-position: rem(-274) rem(-336);
+  background-position: rem(-274) rem(-332);
   position: absolute;
   left: 14px;
   top: 19px;
 
-  @include animation(jump 1s  0.25s 1 both);
+  @include animation(jump 1s  0.3s 1 both);
 
 }
 
@@ -74,9 +80,27 @@ html,body{
   right: 15px;
   top: 51px;
 
-  $og-ani : jump 1s 0s 1,rubberBand 1s ease 2s;
+  $og-ani : jump 1s 0.1s 1,rubberBand 1s ease 2s;
 
   @include animation($og-ani);
+
+}
+
+
+.cicada-url{
+  text-decoration: none;
+  color: #868686;
+  font-size: 15px;
+}
+
+.right-side{
+  text-decoration: none;
+  color: #868686;
+  font-size: 15px;
+
+  width: 24px;
+  position: relative;
+  right: 10px;
 
 }
 
@@ -122,6 +146,7 @@ html,body{
     transform: perspective(400px)
   }
 }
+
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: scale(0.2) translateY(-439px);
@@ -214,7 +239,7 @@ footer{
     margin: 0;
     padding: 0;
 
-    margin-bottom: rem(160);
+    margin-bottom: rem(92);
 
     a{
       text-decoration:none;
@@ -261,10 +286,16 @@ footer{
 }
 
 
+//6
+@media screen and (max-height: 560px) {
+  .btn-top-dw{
+    margin-bottom: rem(220);
+  }
+}
+
 
 //480屏幕下hack
 @media screen and (max-height: 480px) {
-
   .btn-top-dw{
     margin-top: rem(60);
   }
@@ -272,3 +303,4 @@ footer{
     margin-top: rem(60);
   }
 }
+

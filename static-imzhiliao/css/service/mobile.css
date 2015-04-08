@@ -10,6 +10,9 @@
 html, body {
   font-family: "Helvetica Neue","Helvetica","STHeiTi","Arial",sans-serif; }
 
+.block {
+  display: block; }
+
 * {
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent; }
@@ -52,17 +55,17 @@ html, body {
   overflow: hidden; }
 
 .cicada-blue {
-  width: 81.5px;
-  height: 97.5px;
-  background-position: -137px -168px;
+  width: 82px;
+  height: 99.5px;
+  background-position: -137px -166px;
   position: absolute;
   left: 14px;
   top: 19px;
-  -webkit-animation: jump 1s 0.25s 1 both;
-  -ms-animation: jump 1s 0.25s 1 both;
-  -moz-animation: jump 1s 0.25s 1 both;
-  -o-animation: jump 1s 0.25s 1 both;
-  animation: jump 1s 0.25s 1 both; }
+  -webkit-animation: jump 1s 0.3s 1 both;
+  -ms-animation: jump 1s 0.3s 1 both;
+  -moz-animation: jump 1s 0.3s 1 both;
+  -o-animation: jump 1s 0.3s 1 both;
+  animation: jump 1s 0.3s 1 both; }
 
 .cicada-og {
   background-position: -137px -265px;
@@ -71,11 +74,24 @@ html, body {
   position: absolute;
   right: 15px;
   top: 51px;
-  -webkit-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
-  -ms-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
-  -moz-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
-  -o-animation: jump 1s 0s 1, rubberBand 1s ease 2s;
-  animation: jump 1s 0s 1, rubberBand 1s ease 2s; }
+  -webkit-animation: jump 1s 0.1s 1, rubberBand 1s ease 2s;
+  -ms-animation: jump 1s 0.1s 1, rubberBand 1s ease 2s;
+  -moz-animation: jump 1s 0.1s 1, rubberBand 1s ease 2s;
+  -o-animation: jump 1s 0.1s 1, rubberBand 1s ease 2s;
+  animation: jump 1s 0.1s 1, rubberBand 1s ease 2s; }
+
+.cicada-url {
+  text-decoration: none;
+  color: #868686;
+  font-size: 15px; }
+
+.right-side {
+  text-decoration: none;
+  color: #868686;
+  font-size: 15px;
+  width: 24px;
+  position: relative;
+  right: 10px; }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -159,7 +175,7 @@ button.btn-primary:active {
 footer .follow-me {
   margin: 0;
   padding: 0;
-  margin-bottom: 80px; }
+  margin-bottom: 46px; }
   footer .follow-me a {
     text-decoration: none;
     color: #868686;
@@ -192,6 +208,9 @@ footer .follow-me {
   width: 100%;
   height: auto; }
 
+@media screen and (max-height: 560px) {
+  .btn-top-dw {
+    margin-bottom: 110px; } }
 @media screen and (max-height: 480px) {
   .btn-top-dw {
     margin-top: 30px; }
